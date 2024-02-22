@@ -1,0 +1,19 @@
+---
+title: "Fish Data Johnnie"
+author: "Johnnie Runyon"
+date: "2024-02-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+getwd()
+setwd("C:/Users/Johnn/Desktop/BIS_015L_Project")
+```
+```{r}
+
+```
+
