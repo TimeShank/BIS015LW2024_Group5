@@ -1,0 +1,26 @@
+---
+title: "Brainstorm"
+author: "Liana Williams"
+date: "2024-02-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#idea 1 (APPROVED BY PROF!) ; HAS A RESEARCH ARTICLE ASSOCIATED
+```{r}
+[Swimming Endurance Clown Fish](https://www.bco-dmo.org/dataset/739171) #inspired by Clownfish in Finding Nemo; not too long
+```
+
+#idea 2 (kinda boring ngl)
+```{r}
+[Zooplankton Database](https://www.bco-dmo.org/dataset/526852) #good amount of quantitative vs. categorical data 
+```
+
+
+##Project Requirements  
+Each group will prepare a short 5-7 minute presentation of their work. There should be a theme or "story" that can be shared, i.e. what were the big questions, challenges, and tools that you used? Did you learn an interesting new package or method that can be shared?
+
+
