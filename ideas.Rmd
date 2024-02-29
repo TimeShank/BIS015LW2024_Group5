@@ -22,15 +22,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-##Project Requirements  
+# Project Requirements  
 Each group will prepare a short 5-7 minute presentation of their work. There should be a theme or "story" that can be shared, i.e. what were the big questions, challenges, and tools that you used? Did you learn an interesting new package or method that can be shared?
 
-### Questions
+# Questions
 Is it feasible for Nemo's father to travel such a distance? with the given amount of time?
 
 What type of clownfish are Nemo and his dad?
  
 # Structure
+
 ## Tasks
 *every person needs an assigned task*
 
@@ -44,6 +45,6 @@ Stella -
 
 Johnnie - 
 
-### Tools
+# Tools
 
 
