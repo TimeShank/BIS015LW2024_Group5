@@ -13,15 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 getwd()
 ```
 
-```{r}
-[Swimming Endurance Clown Fish](https://www.bco-dmo.org/dataset/739171)
-```
+
 
 **This is the .csv file**
 ```{r}
 clownfish <- read_csv("clownfish_log.csv")%>% clean_names()
 ```
 #Make a note of what each of the variables mean 
-#Lots of NAs is a struggle
-#Tidy of Data
-#come up with questions + plots 
+
