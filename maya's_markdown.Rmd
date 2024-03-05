@@ -26,8 +26,14 @@ with this data specifically, we will have some pivoting to so that's something t
 
 if anyone wants me to make more, text the group chat and what the data should be about. 
 
+prez: copy profs intros 
+title: rescue nemo
 introduction: names, research question 
-cleaned up data and manipulated it 
+Maya: cleaned up data and manipulated it 
+Liana: Maps both species in australia 
+Spencer and Johnie: scatter=distance boxplot=earliest age, bar plot=age and peak movement 
+fun things: nemo palette and gender fact for fish
+conclusion: TBD
 
 Amphiprion percula
 blue tang
