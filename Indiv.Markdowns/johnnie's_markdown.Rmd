@@ -11,9 +11,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 getwd()
-setwd("C:/Users/Johnn/Desktop/BIS_015L_Project")
+#setwd("C:/Users/Johnn/Desktop/BIS_015L_Project/Indiv.Markdowns")
 ```
-```{r}
 
+### Libraries
+```{r}
+#install.packages("luberdate")
+
+#library(here)
+#library(shinydashboard)
+#library(shiny)
+#library(luberdate)
+#library("tidyverse")
+#library("janitor")
+#library(RColorBrewer)
+#library(paletteer)
 ```
 
