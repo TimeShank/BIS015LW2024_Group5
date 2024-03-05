@@ -11,6 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(tidyverse)
+library(janitor)
+library(naniar)
+library(skimr)
 ```
 
 Questions 
@@ -19,9 +22,8 @@ Questions
 3) Do all the fish seen at the beginning of the movie coexsist in the same region, if so where? how close is this to syndey?
 
 The fishbase website allows you to search for specific species so we can use that aspects as well to supplement Liana's data and whatever question we are answering. I'm not sure what we are doing yet so I don't want to convert everything to dataset yet, but Ill add an example or 2.
-```{r}
-reef_fishes_aust <- read_csv("Reef-associated-fishes-australia.csv")
-```
+
+
 with this data specifically, we will have some pivoting to so that's something to consider, we can also combine other data we find as we answer questions. 
 
 if anyone wants me to make more, text the group chat and what the data should be about. 
@@ -36,10 +38,69 @@ fun things: nemo palette and gender fact for fish
 conclusion: TBD
 
 Amphiprion percula
-blue tang
+Paracanthurus hepatus
 location, 
 
 ```{r}
-endurance <- read_csv("endurance.csv")
+endurance <- read_csv("data/endurance.csv") %>% clean_names()
+```
+for distance over time, ages and maturity
+
+to do:
+ 1) filter out all except Amphiprion percula
+ 2) rename "nd" to "0", it means no distance so that is equal to 0
+ 3) take out location, its all at Boston University Lab and unimportant to be repeated 
+
+```{r}
+endurance_clownfish <- endurance %>% 
+  filter(species=="Amphiprion percula") %>% 
+  select(-"location") %>% 
+  replace_with_na(replace = list(tl = "nd",
+                                 sl = "nd",
+                                 bd = "nd",
+                                 pa = "nd",
+                                 time_sec = "nd",
+                                 dist_cm = "nd",
+                                 speed = "nd"))
+```
+
+```{r}
+glimpse(endurance_clownfish)
+```
+Might have to convert tl sl bd and pa to factors to we can graph them 
+
+ 
+
+```{r}
+pointmap <- read_csv("data/fishes_pointmap.csv") %>% clean_names()
+```
+Locations lat and long of both fish species, as well as year they were marked for such, best for map 
+
+to do: 
+ 1) remove NAs
+ 2) filter out unnecessary 
+ 3) rename "names_used" to "species"
+```{r}
+pointmap_fishes <- pointmap %>% 
+  filter(name_used=="Paracanthurus hepatus" | name_used=="Amphiprion percula") %>% 
+  select(name_used, year, latitude, longitude) %>% 
+  rename(species="name_used")
+```
+ 
+```{r}
+glimpse(pointmap_fishes)
+```
+
+ 
+ merge? ask group and prof about possibly using 2 sets as merging will be an incorrect use of data
+
+app: age in relation to distance over time, whose is fastest? which age would get to syney fastest?
+
+```{r}
+write.csv(endurance_clownfish, "endurance_of_clownfish.csv", row.names = FALSE)
+```
+
+```{r}
+write.csv(pointmap_fishes, "long_lat_fishes.csv", row.names = FALSE)
 ```
 

@@ -368,6 +368,21 @@ display: none;
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(janitor)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;janitor&#39;
+## 
+## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     chisq.test, fisher.test</code></pre>
+<pre class="r"><code>library(naniar)
+library(skimr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;skimr&#39;
+## 
+## The following object is masked from &#39;package:naniar&#39;:
+## 
+##     n_complete</code></pre>
 <p>Questions 1) is it possible for a fish to travel that far? (where
 ever a clown fish and a blue tang can exist to Sydney) 2) How many clown
 fish are taken from reefs to be placed in aquariums 3) Do all the fish
@@ -378,14 +393,6 @@ can use that aspects as well to supplement Liana’s data and whatever
 question we are answering. I’m not sure what we are doing yet so I don’t
 want to convert everything to dataset yet, but Ill add an example or
 2.</p>
-<pre class="r"><code>reef_fishes_aust &lt;- read_csv(&quot;Reef-associated-fishes-australia.csv&quot;)</code></pre>
-<pre><code>## Rows: 2062 Columns: 11
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (11): Family, Species, Author, Info, Occurrence, Common names, Abundance...
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <p>with this data specifically, we will have some pivoting to so that’s
 something to consider, we can also combine other data we find as we
 answer questions.</p>
@@ -396,8 +403,8 @@ research question Maya: cleaned up data and manipulated it Liana: Maps
 both species in australia Spencer and Johnie: scatter=distance
 boxplot=earliest age, bar plot=age and peak movement fun things: nemo
 palette and gender fact for fish conclusion: TBD</p>
-<p>Amphiprion percula blue tang location,</p>
-<pre class="r"><code>endurance &lt;- read_csv(&quot;endurance.csv&quot;)</code></pre>
+<p>Amphiprion percula Paracanthurus hepatus location,</p>
+<pre class="r"><code>endurance &lt;- read_csv(&quot;data/endurance.csv&quot;) %&gt;% clean_names()</code></pre>
 <pre><code>## Rows: 791 Columns: 13
 ## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
@@ -407,6 +414,63 @@ palette and gender fact for fish conclusion: TBD</p>
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>for distance over time, ages and maturity</p>
+<p>to do: 1) filter out all except Amphiprion percula 2) rename “nd” to
+“0”, it means no distance so that is equal to 0 3) take out location,
+its all at Boston University Lab and unimportant to be repeated</p>
+<pre class="r"><code>endurance_clownfish &lt;- endurance %&gt;% 
+  filter(species==&quot;Amphiprion percula&quot;) %&gt;% 
+  select(-&quot;location&quot;) %&gt;% 
+  replace_with_na(replace = list(tl = &quot;nd&quot;,
+                                 sl = &quot;nd&quot;,
+                                 bd = &quot;nd&quot;,
+                                 pa = &quot;nd&quot;,
+                                 time_sec = &quot;nd&quot;,
+                                 dist_cm = &quot;nd&quot;,
+                                 speed = &quot;nd&quot;))</code></pre>
+<pre class="r"><code>glimpse(endurance_clownfish)</code></pre>
+<pre><code>## Rows: 110
+## Columns: 12
+## $ date      &lt;date&gt; 2015-03-07, 2015-03-07, 2015-03-07, 2015-03-07, 2015-03-07,…
+## $ species   &lt;chr&gt; &quot;Amphiprion percula&quot;, &quot;Amphiprion percula&quot;, &quot;Amphiprion perc…
+## $ batch_id  &lt;chr&gt; &quot;B 2:4&quot;, &quot;B 2:4&quot;, &quot;B 2:4&quot;, &quot;B 2:4&quot;, &quot;B 2:4&quot;, &quot;B 2:4&quot;, &quot;B 2:4…
+## $ dph       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+## $ stand_dph &lt;dbl&gt; 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, …
+## $ speed     &lt;chr&gt; &quot;2&quot;, &quot;4&quot;, &quot;6&quot;, &quot;8&quot;, &quot;10&quot;, &quot;2&quot;, &quot;4&quot;, &quot;6&quot;, &quot;8&quot;, &quot;10&quot;, &quot;2&quot;, &quot;4&quot;…
+## $ time_sec  &lt;chr&gt; &quot;885&quot;, &quot;162&quot;, &quot;203&quot;, &quot;41&quot;, &quot;10&quot;, &quot;1387&quot;, &quot;388&quot;, &quot;225&quot;, &quot;68&quot;,…
+## $ dist_cm   &lt;chr&gt; &quot;1770&quot;, &quot;648&quot;, &quot;1218&quot;, &quot;328&quot;, &quot;100&quot;, &quot;2774&quot;, &quot;1552&quot;, &quot;1350&quot;,…
+## $ tl        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ sl        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ bd        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ pa        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
+<p>Might have to convert tl sl bd and pa to factors to we can graph
+them</p>
+<pre class="r"><code>pointmap &lt;- read_csv(&quot;data/fishes_pointmap.csv&quot;) %&gt;% clean_names()</code></pre>
+<pre><code>## Rows: 499 Columns: 6
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (3): Name used, Catalog No., Information
+## dbl (3): Year, Latitude, Longitude
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Locations lat and long of both fish species, as well as year they
+were marked for such, best for map</p>
+<p>to do: 1) remove NAs 2) filter out unnecessary 3) rename “names_used”
+to “species”</p>
+<pre class="r"><code>pointmap_fishes &lt;- pointmap %&gt;% 
+  filter(name_used==&quot;Paracanthurus hepatus&quot; | name_used==&quot;Amphiprion percula&quot;) %&gt;% 
+  select(name_used, year, latitude, longitude) %&gt;% 
+  rename(species=&quot;name_used&quot;)</code></pre>
+<pre class="r"><code>glimpse(pointmap_fishes)</code></pre>
+<pre><code>## Rows: 193
+## Columns: 4
+## $ species   &lt;chr&gt; &quot;Amphiprion percula&quot;, &quot;Amphiprion percula&quot;, &quot;Amphiprion perc…
+## $ year      &lt;dbl&gt; NA, NA, NA, 1962, 1963, NA, NA, 2006, 2006, 2006, 1985, NA, …
+## $ latitude  &lt;dbl&gt; -16.50, -16.50, 12.50, 1.17, 1.35, 4.67, 0.00, 25.05, 25.05,…
+## $ longitude &lt;dbl&gt; -151.75, -151.75, 92.75, 103.18, 103.68, 119.40, 120.00, 121…</code></pre>
+<p>merge? ask group and prof about possibly using 2 sets as merging will
+be an incorrect use of data</p>
 
 
 

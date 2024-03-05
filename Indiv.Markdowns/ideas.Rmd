@@ -25,26 +25,37 @@ knitr::opts_chunk$set(echo = TRUE)
 # Project Requirements  
 Each group will prepare a short 5-7 minute presentation of their work. There should be a theme or "story" that can be shared, i.e. what were the big questions, challenges, and tools that you used? Did you learn an interesting new package or method that can be shared?
 
-# Questions
-Is it feasible for Nemo's father to travel such a distance? with the given amount of time?
+# Questions We're Asking
+Is it feasible for a clownfish to travel such a distance to Sydney Australia? With the given amount of time?
 
-What type of clownfish are Nemo and his dad?
+What age would get there the fastest? 
  
 # Structure
+
+# Points to cover
+1) Location where a clown fish (Amphiprion percula) and a blue tang (Paracanthurus hepatus) coexist around Australia 
+1a) How far the location if from Sydney
+2) Clown fish distance over time
+3) Graphs if ages and distances 
+
+App Idea: people can look at the maps of the differnt species and they can look at the ages v distances (basically summarizing out presentation)
 
 ## Tasks
 *every person needs an assigned task*
 
-Liana - 
+Liana - maps 
 
-Maya - 
+Maya - app
 
-Spencer - 
+Spencer - plots
 
-Stella - 
+Stella - app
 
-Johnnie - 
+Johnnie - plots
 
-# Tools
+# Cleaned CSV files we're using
+endurance_of_clownfish.csv
+long_lat_fishes.csv
+
 
 
