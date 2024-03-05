@@ -1,0 +1,122 @@
+---
+title: "Fish Data Liana"
+author: "Liana Williams"
+date: "2024-02-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Load the Libraries 
+```{r}
+library(tidyverse)
+library(janitor)
+library(skimr)
+library(naniar)
+library(visdat)
+library(RColorBrewer)
+library(paletteer)
+```
+
+```{r}
+getwd()
+```
+**IDEAS** 
+-We can make the ReadMe look very nice! 
+-Might need to do formula conversion to km for distance!
+
+#Endurance 
+[endurance](https://www.bco-dmo.org/dataset/739171)
+```{r}
+endurance <- read_csv("/Users/liana/Desktop/BIS15/BIS15W2024_lwilliams/GroupPresentation/BIS_015L_Project/data/endurance.csv") %>% clean_names()
+```
+
+
+##Purpose of the Paper 
+---
+title: Ontogeny of Swimming Endurance in Larval Reef Fish
+author: Your Name
+date: March 4, 2024
+output: html_document
+---
+
+# Introduction
+
+Summarizes key findings from a study on the ontogeny of swimming endurance in larval reef fish and its implications for dispersal patterns.
+
+# Ontogeny of Swimming Endurance
+
+## Swimming Endurance Development
+- Swimming endurance in larval reef fish remains low (< 5 km) until reaching 9–10 mm in size.
+- Late-stage larvae of various reef fish families can swim for long durations, exceeding 20 km in swimming flumes.
+- Swimming duration increases significantly with age in the studied species (Amphiprion percula (**clownfish**), Elacatinus lori, and E. colini).
+- A. percula larvae, in particular, exhibit remarkable endurance, with the best-performing larva covering 64.1 km over 10.5 days.
+
+## Effect of Flow Velocity on Swimming Durations
+- Swimming durations decrease with increasing flow velocity.
+- Durations improve when larval swimming speed exceeds experimental flow velocity.
+- Late-stage A. percula maintains consistent swimming durations across a range of flow velocities from 2 to 10 cm/s.
+
+# Swimming Abilities and Dispersal
+
+## Modal Dispersal Distance
+- Despite trait differences, modal dispersal distance for each species occurs within 0–1 km of their natal origin.
+- Traits like strong swimming abilities and short Pelagic Larval Duration (PLD) don't necessarily correlate with retaining larvae near their natal reef.
+- Maximum swimming speed and mean body size are better predictors of dispersal distances than PLD.
+  
+## Relationship between Swimming Speed and Long-Distance Dispersal (LDD)
+- Strong swimming abilities could facilitate LDD from both the larva's and parent's perspectives.
+- Larvae with strong swimming abilities may search farther for suitable settlement habitat, while parents benefit from larvae being displaced farther without being lost to advection.
+
+# Data Availability
+- The datasets generated during the study are available in the [BCO-DMO repository](https://www.bco-dmo.org/dataset/739171) and [here](https://www.bco-dmo.org/dataset/739149) (Buston and Majoris 2018a, b).
+
+# Conclusion
+This study suggests a correlation between larval swimming abilities and long-distance dispersal in reef fish. It challenges prevailing ideas about the role of specific traits in larval dispersal and emphasizes the importance of swimming abilities in understanding population connectivity for marine conservation strategies.
+
+
+##Scientific Definitions 
+**Ontogeny** - the origination and development of an organism (both physical and psychological, e.g., moral development), usually from the time of fertilization of the egg to adult.  
+
+[ontogeny](https://en.wikipedia.org/wiki/Ontogeny#:~:text=Ontogeny%20(also%20ontogenesis)%20is%20the,entirety%20of%20an%20organism's%20lifespan.)
+
+**Swimming Pool Flume** - is a smaller, compact, counter-current pool in which the swimmer must work against to maintain position.
+
+[pool flume](https://www.swimmingworldmagazine.com/news/endless-pools-an-alternative-to-improve-swimming-performance/#:~:text=A%20swimming%20pool%20flume%20is,work%20against%20to%20maintain%20position.)
+
+
+
+##Variables (This is found in the "parameters" section on the website)
+
+
+| Supplied Name | Supplied Description                                         | Supplied Units                | Standard Name     |
+|---------------|--------------------------------------------------------------|-------------------------------|-------------------|
+| **date**          | Date of swim trial; yyyy/mm/dd                              | unitless                      | date              |
+| **location**      | Indicates whether trials were completed in the lab or field | unitless                      | site              |
+| **species**       | Reef fish species                                           | unitless                      | species           |
+| **batch_id **     | Unique label indicating clutch or batch identity             |  unitless                      | sample_descrip    |
+|**dph**         | Age in days post hatch                                       | days post hatch               | days              |
+| **stand_dph**     | A larva's age/expected age at settlement for each species   | percent                       | age               |
+| **speed**         | Flow rate during the trial                                   | centimeters per second        | no_bcodmo_term    |
+| **time_sec**      | A larva's swimming duration in seconds                      | seconds                       | duration          |
+| **dist_cm**       | Equivalent distance a larva swam                             | centimeters                   | transect          |
+| **TL**            | Total length                                                | millimeters                   | no_bcodmo_term    |
+| **SL**            | Standard length                                             | millimeters                   | no_bcodmo_term    |
+| **BD**            | Body depth                                                  | millimeters                   | width             |
+| **PA**            | Propulsive area                                             | millimeters                   | transect          |
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+**DON'T USE CLOWNFISH DATA IT IS UNORGANIZED AND ALL CATEGORICAL**
+
+#Clownfish Dataset 
+[clownfish](https://www.bco-dmo.org/dataset/526852) 
+
+```{r}
+clownfish <- read_csv("/Users/liana/Desktop/BIS15/BIS15W2024_lwilliams/GroupPresentation/BIS_015L_Project/data/clownfish_log.csv") %>%  clean_names()
+```
