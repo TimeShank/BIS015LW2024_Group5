@@ -18,7 +18,7 @@ Questions
 2) How many clown fish are taken from reefs to be placed in aquariums 
 3) Do all the fish seen at the beginning of the movie coexsist in the same region, if so where? how close is this to syndey?
 
-The fsihbase webiste allows you to search for specific species so we can use that aspects as well to supplement Liana's data and whatever question we are answering. I'm not sure what we are doing yet so I don't want to convert everything to dataset yet, but Ill add an example or 2.
+The fishbase website allows you to search for specific species so we can use that aspects as well to supplement Liana's data and whatever question we are answering. I'm not sure what we are doing yet so I don't want to convert everything to dataset yet, but Ill add an example or 2.
 ```{r}
 reef_fishes_aust <- read_csv("Reef-associated-fishes-australia.csv")
 ```
@@ -26,4 +26,14 @@ with this data specifically, we will have some pivoting to so that's something t
 
 if anyone wants me to make more, text the group chat and what the data should be about. 
 
+introduction: names, research question 
+cleaned up data and manipulated it 
+
+Amphiprion percula
+blue tang
+location, 
+
+```{r}
+endurance <- read_csv("endurance.csv")
+```
 
