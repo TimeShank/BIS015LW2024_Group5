@@ -28,3 +28,85 @@ getwd()
 #library(paletteer)
 ```
 
+
+After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
+
+Nemo and Marlin live near the Great Barrier Reef. This is where Nemo was taken.
+
+Marlin pursues the boat
+
+His journey: 
+
+1) bumps into Dory, a blue tang with acute short-term memory loss, who offers her help
+
+2) The two encounter Bruce, Anchor, and Chum, three sharks who have sworn to abstain from eating fish. Marlin finds a diver's mask that fell from the boat, accidentally hitting Dory. The scent of her blood sends Bruce into a frenzy and he accidentally sets off old naval mines that knock Marlin and Dory unconscious.
+
+3) Marlin and Dory wake up but the mask falls into a deep trench. Swimming after it, they are attacked by an anglerfish.
+
+4) Dory memorizes the address on the goggles before they escape. The two take directions for East Australian Current from a school of moonfish but find themselves in a forest of jellyfish.
+
+5) Stung and knocked unconscious, they awaken in the East Australian Current with a large group of sea turtles, including Crush and his son, Squirt.
+
+6) The sea turtles take Marlin and Dory to their Sydney exit, where they get lost and are consumed by a blue whale.
+
+7) The whale expels them through its blowhole into Sydney Harbour.
+
+8) A pelican named Nigel takes them to Sherman's office
+
+## Questions
+
+Can a clounfish and a blue tang swim all the way from the great barrier reef to sydney?
+Where is sydney?
+How far is sydney from the great barrier reef?
+What is the endurance of a clownfish?
+How fast can a clownfish swim?
+What type of clownfish?
+How soon do the fish need to reach nemo?
+Where do clownfish and blue tangs coexist?
+
+Age
+species
+gender
+
+how would clownfish and blue tangs coexist
+how likely are these fish to survive an encounter with those sharks?
+what type of sharks?
+how likely are these fish to survive an angler fish?
+type of anglerfish?
+survival with jellyfish?
+where is the East Australian Current and how fast does it go?
+location of the current exit and sydney harbor
+blue whale speed
+
+
+1) Location where a clown fish (Amphiprion percula) and a blue tang (Paracanthurus hepatus) coexist around Australia 
+1a) How far the location if from Sydney
+2) Clown fish distance over time
+3) Graphs if ages and distances 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

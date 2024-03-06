@@ -1,6 +1,6 @@
 ---
 title: "Fish Data Spencer"
-author: "Johnnie Runyon"
+author: "Spencer"
 date: "2024-02-22"
 output: html_document
 ---

@@ -34,9 +34,9 @@ What age would get there the fastest?
 
 # Points to cover
 1) Location where a clown fish (Amphiprion percula) and a blue tang (Paracanthurus hepatus) coexist around Australia 
-1a) How far the location if from Sydney
+1a) How far the location is from Sydney
 2) Clown fish distance over time
-3) Graphs if ages and distances 
+3) Graphs of ages and distances 
 
 App Idea: people can look at the maps of the differnt species and they can look at the ages v distances (basically summarizing out presentation)
 
