@@ -28,10 +28,10 @@ getwd()
 #library(paletteer)
 ```
 
-
+### Finding Nemo story
 After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
 
-Nemo and Marlin live near the Great Barrier Reef. This is where Nemo was taken.
+Nemo and Marlin live in a sea anemone near the Great Barrier Reef. This is where Nemo was taken.
 
 Marlin pursues the boat
 
@@ -56,7 +56,7 @@ His journey:
 ## Questions
 
 Can a clounfish and a blue tang swim all the way from the great barrier reef to sydney?
-Where is sydney?
+Where is sydney? - Australia
 How far is sydney from the great barrier reef?
 What is the endurance of a clownfish?
 How fast can a clownfish swim?
@@ -65,8 +65,14 @@ How soon do the fish need to reach nemo?
 Where do clownfish and blue tangs coexist?
 
 Age
-species
-gender
+
+Fish Species:
+  Marlin & Nemo - "Clownfish" - Either Amphiprion ocellaris or Amphiprion percula.
+  Dory - "Blue tang" - Paracanthurus hepatus
+  Sharks - 
+  Whale - 
+
+Gender
 
 how would clownfish and blue tangs coexist
 how likely are these fish to survive an encounter with those sharks?
@@ -84,9 +90,17 @@ blue whale speed
 2) Clown fish distance over time
 3) Graphs if ages and distances 
 
+## Sources
 
 
+*Marlin's character* (https://disney.fandom.com/wiki/Marlin#:~:text=4%20Trivia-,Background,Nemo%2C%20although%20he%20means%20well)
 
+*Marlin and Nemo's Species* (https://www.scuba.com/blog/meet-real-cast-finding-nemo/) *and* (https://www.businessinsider.com/real-facts-in-finding-nemo-pixar-movie-2019-6#scuba-divers-like-dr-sherman-who-capture-marine-life-for-sport-are-doing-a-disservice-to-these-habitats-17) *and* (https://theconversation.com/why-does-nemo-the-clownfish-have-three-white-stripes-the-riddle-solved-at-last-104176#:~:text=Nemo%2C%20alias%20Amphiprion%20ocellaris%2C%20belongs,light%2Dreflecting%20cells%20called%20iridophores.)
+
+*Nemo story* (https://en.wikipedia.org/wiki/Finding_Nemo) *and* (https://disney.fandom.com/wiki/Marlin#:~:text=4%20Trivia-,Background,Nemo%2C%20although%20he%20means%20well)
+
+*East Australian Current*
+https://theconversation.com/can-you-surf-the-east-australian-current-finding-nemo-style-27392
 
 
 
