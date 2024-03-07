@@ -86,7 +86,7 @@ Blue whale speed?
 
 Fish Species:
   Marlin & Nemo - "Clownfish" - Either *Amphiprion ocellaris* or Amphiprion percula.
-  *A lot of sources say ocellaris, but only based on appearence. Both these species are plausable and both should be considered*
+  *A lot of sources say ocellaris, but only based on appearence/speculation. Both these species are plausable and both should be considered*
   Dory - "Blue tang" - Paracanthurus hepatus
   Sharks - 
   Whale - 
