@@ -1,23 +1,39 @@
-# BIS 015L Project
+# Project Title: Nemo IRL 🐠
 
-#Members:  **make this look pretty**
+## Description
 
-Maya 
+Welcome to Nemo IRL, an exciting project that dives into the underwater world inspired by the beloved animated film "Finding Nemo." This repository is dedicated to exploring and discovering interesting facts, images, and trivia related to the enchanting characters and vibrant marine life featured in the movie.
 
-Johnnie 
+![Clownfish and Blue Tang](https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2016_18/1075561/finding-nemo-dory-today-160504-tease-02.jpg)
 
-Liana 
+## Features (EDIT THIS)
 
-Spencer 
+- **INSERT SOMETHING HERE ABOUT WHAT OUR THINGS ARE**
 
-Stella 
+- **Interactive Map:** Explore the animated underwater world with an interactive map showcasing key locations from the movie. 
 
-## Fish data
+- **Fun Facts:** Discover fascinating trivia about different species of fish and marine life depicted in "Finding Nemo."
 
-### sources
+## Team Members
 
-https://fishbase.mnhn.fr/search.php
+1. **Liana**
+   - *Role:* 
+   - *Description:* 
 
-https://www.bco-dmo.org/dataset/739171 **swimming endurance**
+2. **Maya**
+   - *Role:* 
+   - *Description:* 
 
-https://www.bco-dmo.org/dataset/526852 **Zooplankton (Not using)** ?have not researched too much into
+3. **Spencer**
+   - *Role:* 
+   - *Description:*
+
+4. **Johnnie**
+   - *Role:*
+   - *Description:*  
+
+5. **Stella**
+   - *Role:* 
+   - *Description:*
+
+
