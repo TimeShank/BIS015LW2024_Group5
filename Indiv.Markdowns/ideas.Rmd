@@ -43,15 +43,30 @@ App Idea: people can look at the maps of the differnt species and they can look 
 ## Tasks
 *every person needs an assigned task*
 
+
 Liana - maps 
+#longitude and latitude of clownfish and blue tang ; use colors from both 
+#map of where they start and end
+#distance from Sydney
+
 
 Maya - app
+#work with stella and combine data for app
 
 Spencer - plots
+#graphs for distance travelled of endurance data 
+#graphs for speed
+#graphs of speed versus time 
+#graph of overall fish length and size
+
 
 Stella - app
+#work with maya and combine data for app
 
 Johnnie - plots
+#graph velocity of the current 
+#compare with spencers data about using the current to travel or not
+
 
 # Cleaned CSV files we're using
 endurance_of_clownfish.csv
