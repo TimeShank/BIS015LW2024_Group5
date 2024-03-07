@@ -14,6 +14,8 @@ library(tidyverse)
 library(janitor)
 library(naniar)
 library(skimr)
+library(shiny)
+library(shinydashboard)
 ```
 
 Questions 
@@ -103,4 +105,16 @@ write.csv(endurance_clownfish, "endurance_of_clownfish.csv", row.names = FALSE)
 ```{r}
 write.csv(pointmap_fishes, "long_lat_fishes.csv", row.names = FALSE)
 ```
+
+dis v speed 
+size v larvae
+map of locations
+
+load in the lat_log_fishes.csv and endurance_of_clownfish.csv
+```{r}
+endurance_clownfish <- read_csv("data/endurance_of_clownfish.csv") %>% clean_names()
+long_lat_fishes <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
+```
+make a shiny app which compares the distance vs speed of the clownfish with the stand_dph being a slider input
+
 
