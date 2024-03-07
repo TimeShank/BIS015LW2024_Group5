@@ -28,6 +28,17 @@ getwd()
 #library(paletteer)
 ```
 
+### How to present ###
+
+We want to ask if Marlin and Dory can actually make the tip to sydney from the Great Barrier Reef
+
+We will use the data frames that have these factors:
+
+In combination to details such as, the fish ridding the East Australian current, hitching a ride in a blue whale, etc.
+
+We can present the data using R,an app, and powerpoints. I suggest taking code chunks and graphs, maps, etc and inserting it into the powerpoint, as well as making the app accessable via a web ling that we can include in the powerpoint
+
+
 ### Finding Nemo story
 After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
 
