@@ -4,7 +4,7 @@
 
 Welcome to Nemo IRL, an exciting project that dives into the underwater world inspired by the beloved animated film "Finding Nemo." This repository is dedicated to exploring and discovering interesting facts, images, and trivia related to the enchanting characters and vibrant marine life featured in the movie.
 
-![Clownfish and Blue Tang](https://link-to-your-image-hosting-service/clownfish_blue_tang.jpg)
+![Clownfish and Blue Tang](https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2016_18/1075561/finding-nemo-dory-today-160504-tease-02.jpg)
 
 ## Features (EDIT THIS)
 
