@@ -10,6 +10,48 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-getwd()
+library(tidyverse)
+library(janitor)
+library(dplyr)
+library(shiny)
+library(shinydashboard)
+library(skimr)
+library(naniar)
+library(visdat)
+library(RColorBrewer)
+# install.packages("paletteer")
+library(paletteer)
 ```
+    Turn off scientific notation
+```{r}
+options(scipen = 999)
+```
+
+    Input fish data
+```{r}
+clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv")
+```
+
+```{r}
+clownfish_endurance %>%
+  ggplot(aes(log10(dist_cm))) +
+  geom_density(color = "black", fill = "purple3") 
+#speed is in cm per second 
+```
+
+```{r}
+clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  ggplot(aes(dist_cm)) +
+  geom_density(color = "black", fill = "purple3") 
+```
+
+
+```{r}
+clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  ggplot(aes(speed)) +
+  geom_density(color = "black", fill = "") 
+```
+
 
