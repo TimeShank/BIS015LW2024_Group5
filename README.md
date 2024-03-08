@@ -6,34 +6,26 @@ Welcome to Nemo IRL, an exciting project that dives into the underwater world in
 
 ![Clownfish and Blue Tang](https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2016_18/1075561/finding-nemo-dory-today-160504-tease-02.jpg)
 
-## Features (EDIT THIS)
-
-- **INSERT SOMETHING HERE ABOUT WHAT OUR THINGS ARE**
-
-- **Interactive Map:** Explore the animated underwater world with an interactive map showcasing key locations from the movie. 
-
-- **Fun Facts:** Discover fascinating trivia about different species of fish and marine life depicted in "Finding Nemo."
-
 ## Team Members
 
 1. **Liana**
-   - *Role:* 
-   - *Description:* 
+   - *Role:* Cartographer (Map Designer)
+   - *Description:* Mapping the location of Blue Tang and Clownfish in Australia and creating visually stunning representations
 
 2. **Maya**
-   - *Role:* 
-   - *Description:* 
+   - *Role:* DataVista Architects (App Designer) + Clean Data
+   - *Description:* Synthesized the information to craft an interactive and visually captivating Shiny app. 
 
 3. **Spencer**
-   - *Role:* 
-   - *Description:*
+   - *Role:* Graph Maestro of Aquatic Metrics (Plots Designer)
+   - *Description:* Crafted visually compelling plots, showcasing the distance traveled in endurance data, speed profiles, speed-versus-time relationships, and representations of overall fish length and size
 
 4. **Johnnie**
-   - *Role:*
-   - *Description:*  
+   - *Role:* Aqueous Velocity Virtuoso (Plots Designer)
+   - *Description:* Graphed current velocities and combined plots data, unraveled the dynamics of utilizing currents for efficient aquatic travel.
 
 5. **Stella**
-   - *Role:* 
-   - *Description:*
+   - *Role:* DataVista Architects (App Designer)
+   - *Description:* Synthesized the information to  craft an interactive and visually captivating Shiny app. 
 
 
