@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to Nemo IRL, an exciting project that dives into the underwater world inspired by the beloved animated film "Finding Nemo." This repository is dedicated to exploring and discovering interesting facts of the Clownfish("Marlin") and Blue Tang("Dory") and how it is related to the enchanting characters and vibrant marine life featured in the movie.
+Welcome to Nemo IRL, an exciting project that dives into the underwater world inspired by the beloved animated film "Finding Nemo." This repository is dedicated to exploring and discovering interesting information about the Clownfish("Marlin") and Blue Tang("Dory").
 
 ![Clownfish and Blue Tang](https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2016_18/1075561/finding-nemo-dory-today-160504-tease-02.jpg)
 
