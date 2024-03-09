@@ -39,14 +39,12 @@ In combination to details such as, the fish ridding the East Australian current,
 We can present the data using R,an app, and powerpoints. I suggest taking code chunks and graphs, maps, etc and inserting it into the powerpoint, as well as making the app accessable via a web ling that we can include in the powerpoint
 
 
-### Finding Nemo story
+### Finding Nemo - Marlin's journey:
 After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
-
 Nemo and Marlin live in a sea anemone near the Great Barrier Reef. This is where Nemo was taken.
 
 Marlin pursues the boat
 
-*Marlin's journey*: 
 
 1) bumps into Dory, a blue tang with acute short-term memory loss, who offers her help
 
@@ -64,7 +62,7 @@ Marlin pursues the boat
 
 8) A pelican named Nigel takes them to Sherman's office
 
-## Questions
+## Questions to consider
 
 Can a clounfish and a blue tang swim all the way from the great barrier reef to sydney?
 Where is sydney? - Australia *we should be specific*
