@@ -36,13 +36,7 @@ endurance <- read_csv("/Users/liana/Desktop/BIS15/BIS15W2024_lwilliams/GroupPres
 ```
 
 
-##Purpose of the Paper 
----
-title: Ontogeny of Swimming Endurance in Larval Reef Fish
-author: Your Name
-date: March 4, 2024
-output: html_document
----
+##Purpose of the Paper (Endurance Dataset)
 
 # Introduction
 
@@ -110,7 +104,64 @@ This study suggests a correlation between larval swimming abilities and long-dis
 | **PA**            | Propulsive area                                             | millimeters                   | transect          |
 
 
+#Information on Dory (Paracanthurus hepatus) and Marlin (Amphiprion percula)
 
+The Great Barrier Reef is part of a larger system of ocean circulation in the Pacific Ocean. 
+
+[aquarium of the pacific](https://www.aquariumofpacific.org/onlinelearningcenter/species/palette_surgeonfish)
+-The Paracanthurus hepatus is a platte surgeonfish known as a regal blue tang, and blue tang. 
+-weapons like spines at the base of its tail.
+
+**LOCATION: Indo-Pacific Ocean **from East Africa to Kiribati, north to southern Japan, south to the southern Great Barrier Reef, Samoa and New Caledonia.
+
+((((((--THIS IS SEEN IN THE MAPS SECTION--))))))
+
+**HABITAT: Coral Reefs with strong water currents**
+
+**LONGEVITY: 12-14 but up to 30 yrs**
+
+**Size**
+Palette surgeonfish range from 5 to 15 inches (12 to 38 centimeters) in length, averaging 10 to 12 inches (25 to 31 centimeters).
+
+**REPRODUCTION**
+Breeding takes place during the cooler months, depending on location and water temperature. Breeding activity is most concentrated from December to June in the Pacific. 
+
+(((((--USE THIS TO EXPLAIN WHY DORY AND MARLIN ARE NOT FOUND IN THE SAME LOCATION ON THE MAP)))))
+
+[clownfishdiversity](https://animaldiversity.org/accounts/Amphiprion_percula/)
+
+# Amphiprion percula (clownfish)
+**LOCATION:** True clown anemonefishes (Amphiprion percula) are native only to the Indo-Pacific Region (Rosenberg and Cruz, 1988). The species ranges from Northern Queensland to Melanesia, which comprises New Guinea, New Britain, New Ireland, the Solomon Islands, and Vanuatu (Fautin and Allen, 1992)
+
+**HABITAT:**
+Form symbiotic relationships with sea anemones. 
+Habitat Regions: tropical saltwater or marine
+Aquatic Biomes: reef; coastal
+Range depth
+1 to 12 m
+3.28 to 39.37 ft
+
+**PHYSICAL DESCRIPTION**
+A. percula can grow to 110 mm in length and is often distinguished by three white vertical bars on a bright orange body
+
+**REPRODUCTION**
+A. percula can breed/spawn year round due to the perpetually warm tropical waters they inhabit.
+
+**LONGEVITY** data is limited but, avergae for the wold is 6-10 years.
+
+[barrierreef.org](https://www.barrierreef.org/the-reef/animals/clownfish#:~:text=Clownfish%20survive%20in%20a%20mutually,the%20anemone's%20poison%20and%20eaten.)
+-Clownfish survive in a mutually assistive symbiotic relationship with anemone. The anemone protect the clownfish from predators and provide food scraps. The clownfish in turn, clean the anemone's poison and eat the anemone's dead tentacles.Their bright colors are used to lure fish into the anemone's tentacles.
+
+##facts of clownfish 
+-clownfish eggs can be hatched anytime during the year. 
+-after the clownfish eggs are laid, the male clownfish guard them until they hatch. 
+-Clownfish are all born males. Once they become female, they cannot be male again. 
+-Not yet known how clownfish survive the anemone's poison. 
+-Male clownfish are the primary caretakers for their young, with females only helping on occasion. 
+
+**REPRODUCTION**
+-If the female of the group dies, the dominant male fish will turn permanently female and the largest of the smaller males will become the next dominant male.
+-Female clownfish can lay thousands of eggs. After they are laid, the male will fertilise them. Any damaged or infertile eggs are typically eaten by the male.  
 
 
 ------------------------------------------------------------------------------------------------------------------
