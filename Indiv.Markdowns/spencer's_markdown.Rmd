@@ -21,6 +21,8 @@ library(visdat)
 library(RColorBrewer)
 # install.packages("paletteer")
 library(paletteer)
+library(RColorBrewer)
+library(ggthemes)
 ```
     Turn off scientific notation
 ```{r}
@@ -33,9 +35,11 @@ clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv")
 ```
 
 ```{r}
-clownfish_endurance %>%
+graph_dist <- clownfish_endurance %>%
   ggplot(aes(log10(dist_cm))) +
-  geom_density(color = "black", fill = "purple3") 
+  geom_histogram() 
+  
+  
 #speed is in cm per second 
 ```
 
@@ -50,8 +54,10 @@ clownfish_endurance %>%
 ```{r}
 clownfish_endurance %>%
   filter(dist_cm != "NA") %>%
-  ggplot(aes(speed)) +
-  geom_density(color = "black", fill = "") 
+  ggplot(aes(x= log10(dist_cm), y=log10(time_sec), color = speed)) +
+  geom_point() +
+  scale_color_manual(viridis::inferno)
+  theme_economist() 
 ```
 
 
