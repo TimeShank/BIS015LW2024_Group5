@@ -1,14 +1,19 @@
 ---
 title: "Fish Data Spencer"
 author: "Spencer"
-date: "2024-02-22"
-output: html_document
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+    
+    
+## Load packages. 
+    
 ```{r}
 library(tidyverse)
 library(janitor)
@@ -17,18 +22,24 @@ library(skimr)
 library(ggthemes)
 ```
     
-    ## Turn off scientific notation
+    
+## Turn off scientific notation. 
+    
 ```{r}
 options(scipen = 999)
 ```
 
-    ## Input fish data, names are already clean
+
+## Input fish data, names are already clean. 
+    
 ```{r}
 clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv")
 ```
   
-    ## Distribution of speeds of clownfish larvae
-```{r}
+  
+## Distribution of speeds of clownfish larvae. 
+    
+```{r} 
 clownfish_endurance %>%
   ggplot(aes(speed)) +
   geom_histogram(bins = 5, color= "black", fill = "orange", alpha = 0.8) + 
@@ -39,7 +50,8 @@ clownfish_endurance %>%
 ```
   
     
-    ## Scatter plot for distance travelled over time.
+## Scatter plot for distance travelled over time.  
+    
 ```{r} 
 # move graph legend to the left, title to the middle
 
@@ -54,7 +66,9 @@ clownfish_endurance %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
  
-    ## Clownfish data into kilometers and hours
+ 
+## Clownfish data into kilometers and hours. 
+    
 ```{r}
 clownfish_endurance_2 <- clownfish_endurance %>%
   filter(dist_cm != "NA") %>%
@@ -65,15 +79,31 @@ clownfish_endurance_2 <- clownfish_endurance %>%
 ```
 
 
-    ## Speed in kilometers/ hour
+## Speed in kilometers/ hour. 
+    
 ```{r}
 clownfish_endurance_2 %>%
   select(dist_km, time_hr) %>%
   mutate(speed_km_hr = dist_km / time_hr) %>%
+  top_n(10, dist_km) %>%
   arrange(-dist_km)
 ```
     
-    ## Time it takes to travel to Sydney with mutated speed variabel to factor in speed of East Australian current (7km/hr)
+    
+## Time it takes to travel to Sydney with mutated speed variabel to factor in speed of East Australian current (+7km/hr). 
+    
+    TABLE. 
+    
+```{r}
+clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  arrange(-dist_km)
+```
+    
+    GRAPH. 
+    
 ```{r}
 clownfish_endurance_2 %>% 
   select(dist_km, time_hr) %>%
@@ -86,8 +116,9 @@ clownfish_endurance_2 %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-    ## Total length of clownfish distribution 
 
+## Total length of clownfish distribution. 
+    
 ```{r}
 clownfish_endurance %>%
     filter(tl != "NA") %>%
