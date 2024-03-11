@@ -1,4 +1,4 @@
-# Project Title: Nemo IRL 🐠
+# Project Title: Finding Nemo: How Far Did They Go? 🐠
 
 ## Description
 
