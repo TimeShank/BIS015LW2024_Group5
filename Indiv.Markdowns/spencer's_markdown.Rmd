@@ -13,27 +13,21 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(janitor)
 library(dplyr)
-library(shiny)
-library(shinydashboard)
 library(skimr)
-library(naniar)
-library(visdat)
-library(RColorBrewer)
-# install.packages("paletteer")
-library(paletteer)
-library(RColorBrewer)
 library(ggthemes)
 ```
-    Turn off scientific notation
+    
+    ## Turn off scientific notation
 ```{r}
 options(scipen = 999)
 ```
 
-    Input fish data
+    ## Input fish data, names are already clean
 ```{r}
 clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv")
 ```
-
+  
+    ## Distribution of speeds of clownfish larvae
 ```{r}
 clownfish_endurance %>%
   ggplot(aes(speed)) +
@@ -42,18 +36,10 @@ clownfish_endurance %>%
   theme_economist() + 
   theme(plot.title = element_text(hjust = 0.5))
   
+```
   
-#speed is in cm per second 
-```
-
-```{r}
-clownfish_endurance %>%
-  filter(dist_cm != "NA") %>%
-  ggplot(aes(dist_cm)) +
-  geom_density(color = "black", fill = "purple3") 
-```
-
-
+    
+    ## Scatter plot for distance travelled over time.
 ```{r} 
 # move graph legend to the left, title to the middle
 
@@ -63,11 +49,12 @@ clownfish_endurance %>%
   ggplot(aes(x= log10(dist_cm), y=log10(time_sec), color = speed)) +
   geom_point() +
   theme_economist() + 
-  labs(title = "Clownfish Endurance", x = "log10 Distance (cm)", y = "log10 Time (sec)", color = "Speed (cm/sec)") + 
+  labs(title = "Clownfish Endurance", x = "Distance ( log10(cm) )", y = "Time ( log10(sec) )", color = "Speed (cm/sec)") + 
   theme(legend.position = "right") + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+ 
+    ## Clownfish data into kilometers and hours
 ```{r}
 clownfish_endurance_2 <- clownfish_endurance %>%
   filter(dist_cm != "NA") %>%
@@ -77,12 +64,29 @@ clownfish_endurance_2 <- clownfish_endurance %>%
   arrange(-dist_km)
 ```
 
+
+    ## Speed in kilometers/ hour
 ```{r}
 clownfish_endurance_2 %>%
   select(dist_km, time_hr) %>%
   mutate(speed_km_hr = dist_km / time_hr) %>%
   arrange(-dist_km)
 ```
+    
+    ## Time it takes to travel to Sydney with mutated speed variabel to factor in speed of East Australian current (7km/hr)
+```{r}
+clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  ggplot(aes(days_to_sydney)) + 
+  geom_density(fill = "orange", alpha = 0.7) +
+  theme_economist() +
+  labs(title = "Time to Sydney with Current", x = "Time (Days)", y = "Density") + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+    ## Total length of clownfish distribution 
 
 ```{r}
 clownfish_endurance %>%
@@ -90,6 +94,7 @@ clownfish_endurance %>%
   ggplot(aes(tl)) + 
   geom_density(fill= "orange", alpha = 0.7) + 
   theme_economist() + 
-  labs(title = "Total Length of Clownfish", x = "Total Length (cm)", y = "Density") 
+  labs(title = "Total Length of Clownfish", x = "Total Length (cm)", y = "Density") +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
