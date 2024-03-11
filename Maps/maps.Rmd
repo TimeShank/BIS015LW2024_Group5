@@ -1,0 +1,119 @@
+---
+title: "Maps"
+author: "Liana Williams"
+date: "2024-03-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Load the Libraries 
+```{r}
+library(tidyverse)
+library(janitor)
+library(skimr)
+library(naniar)
+library(visdat)
+library(RColorBrewer)
+library(paletteer)
+#install.packages("ggmap")
+library(ggmap)
+```
+**Liana - maps**
+
+Load the data for longitude and latitude of clownfish and blue tang
+```{r}
+long_lat <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
+```
+
+#Scatterplot of the longitude and latitude of clownfish and blue tang
+```{r}
+#Make a scatterplot of the clownfish and blue tang
+long_lat %>%
+  ggplot(aes(x = longitude, y = latitude, color = species)) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_manual(values = c("orange", "blue")) + #make the colors the same as Marlin and Dory so, the colors are consistent. 
+  labs(title = "Longitude and Latitude of Clownfish and Blue Tang")
+```
+
+**Our goal here is to plot the Amphirion Percula (clownfish) and Paracanthurus hepatus (blue tang) locations from the columns which contain the latitude and longitude.**
+
+Load a map from `stamen` in a terrain style projection and display the map. 
+```{r}
+register_stadiamaps("ae9b303b-2453-44b9-8f34-55a7a872cf5c", write = FALSE)
+```
+
+#Map the longitude and latitude of Amphiprion percula in Australia
+```{r}
+library(ggplot2)
+library(ggmap)
+
+# Filter df for the species 'Amphiprion percula' in Australia
+long_lat_australia <- long_lat[long_lat$species == 'Amphiprion percula',]
+
+# Define the bounding box for Australia
+lat_range <- c(-43.00311, -10.062805)  # Australia's approximate latitudinal range
+long_range <- c(113.6594, 153.61194)   # Australia's approximate longitudinal range
+bbox_australia <- c(left = min(long_range), bottom = min(lat_range), right = max(long_range), top = max(lat_range))
+
+# Get the base map for the bounding box area
+map_australia <- get_stadiamap(bbox = bbox_australia, maptype = "stamen_terrain", zoom = 6)
+
+# Plot the base map with points from long_lat_australia
+ggmap(map_australia) +
+  geom_point(data = long_lat_australia, aes(x = longitude, y = latitude, color = species), size = 1.5) +
+  scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Amphiprion percula in Australia") +
+  theme(legend.position = "none")
+```
+
+#Map the longitude and latitude of Paracanthurus hepatus
+```{r}
+library(ggplot2)
+library(ggmap)
+
+# Filter df for the species 'Paracanthurus hepatus'
+long_lat_paracanthurus <- long_lat[long_lat$species == 'Paracanthurus hepatus',]
+
+# Define the bounding box based on the min and max ranges of longitude and latitude for 'Paracanthurus hepatus'
+
+lat_range_paracanthurus <- range(long_lat_paracanthurus$latitude)
+long_range_paracanthurus <- range(long_lat_paracanthurus$longitude)
+bbox_paracanthurus <- c(left = min(long_range_paracanthurus), bottom = min(lat_range_paracanthurus), 
+                       right = max(long_range_paracanthurus), top = max(lat_range_paracanthurus))
+
+# Get the base map for the bounding box area
+map_paracanthurus <- get_stadiamap(bbox = bbox_paracanthurus, maptype = "stamen_terrain", zoom = 6)
+
+# Plot the base map with points from df_paracanthurus
+ggmap(map_paracanthurus) +
+  geom_point(data = long_lat_paracanthurus, aes(x = longitude, y = latitude), color = "blue", size = 1) +
+  labs(title = "Distribution of Paracanthurus hepatus") +
+  theme(legend.position = "none")
+```
+
+#Map that plots both species longitude and latitude and color codes them
+```{r}
+library(ggplot2)
+library(ggmap)
+
+# Define the bounding box based on the min and max ranges of longitude and latitude for both species
+lat_range <- range(long_lat$latitude)
+long_range <- range(long_lat$longitude)
+bbox_species <- c(left = min(long_range), bottom = min(lat_range), 
+                  right = max(long_range), top = max(lat_range))
+
+# Get the base map for the bounding box area
+map_species <- get_stadiamap(bbox = bbox_species, maptype = "stamen_terrain", zoom = 4)
+
+# Plot the base map with points from df for both species
+ggmap(map_species) +
+  geom_point(data = long_lat, aes(x = longitude, y = latitude, color = species), size = 1, alpha=0.7) +
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+  theme(legend.position = "bottom")
+```
