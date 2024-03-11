@@ -175,7 +175,7 @@ clownfish <- read_csv("/Users/liana/Desktop/BIS15/BIS15W2024_lwilliams/GroupPres
 ```
 
 
-------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 **Liana - maps**
 
@@ -308,6 +308,7 @@ install.packages("geosphere")
 library(geosphere)
 library(ggplot2)
 ```
+-------------------------------------------------------------------------------------------------------
 **We need a data frame for the two locations to plot**
 Based on the longitude and latitude provided map the distance from Sydeny to the Great Barrier Reef  
 ```{r}
