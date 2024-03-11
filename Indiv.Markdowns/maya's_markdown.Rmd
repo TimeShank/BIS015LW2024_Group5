@@ -18,11 +18,13 @@ library(shiny)
 library(shinydashboard)
 ```
 
+### Possible questions we could ask 
 Questions 
-1) is it possible for a fish to travel that far? (where ever a clown fish and a blue tang can exist to Sydney)
+#1) is it possible for a fish to travel that far? (where ever a clown fish and a blue tang can exist to Sydney)
 2) How many clown fish are taken from reefs to be placed in aquariums 
 3) Do all the fish seen at the beginning of the movie coexsist in the same region, if so where? how close is this to syndey?
 
+### data info 
 The fishbase website allows you to search for specific species so we can use that aspects as well to supplement Liana's data and whatever question we are answering. I'm not sure what we are doing yet so I don't want to convert everything to dataset yet, but Ill add an example or 2.
 
 
@@ -43,10 +45,13 @@ Amphiprion percula
 Paracanthurus hepatus
 location, 
 
+
+### Data clean up
+
+#### Endeurance data
 ```{r}
 endurance <- read_csv("data/endurance.csv") %>% clean_names()
 ```
-for distance over time, ages and maturity
 
 to do:
  1) filter out all except Amphiprion percula
@@ -65,38 +70,24 @@ endurance_clownfish <- endurance %>%
                                  dist_cm = "nd",
                                  speed = "nd"))
 ```
-
-```{r}
-glimpse(endurance_clownfish)
-```
-Might have to convert tl sl bd and pa to factors to we can graph them 
-
  
-
+#### location data
 ```{r}
 pointmap <- read_csv("data/fishes_pointmap.csv") %>% clean_names()
 ```
-Locations lat and long of both fish species, as well as year they were marked for such, best for map 
 
 to do: 
  1) remove NAs
  2) filter out unnecessary 
  3) rename "names_used" to "species"
+ 
 ```{r}
 pointmap_fishes <- pointmap %>% 
   filter(name_used=="Paracanthurus hepatus" | name_used=="Amphiprion percula") %>% 
   select(name_used, year, latitude, longitude) %>% 
   rename(species="name_used")
 ```
- 
-```{r}
-glimpse(pointmap_fishes)
-```
 
- 
- merge? ask group and prof about possibly using 2 sets as merging will be an incorrect use of data
-
-app: age in relation to distance over time, whose is fastest? which age would get to syney fastest?
 
 ```{r}
 write.csv(endurance_clownfish, "endurance_of_clownfish.csv", row.names = FALSE)
@@ -106,15 +97,347 @@ write.csv(endurance_clownfish, "endurance_of_clownfish.csv", row.names = FALSE)
 write.csv(pointmap_fishes, "long_lat_fishes.csv", row.names = FALSE)
 ```
 
-dis v speed 
-size v larvae
-map of locations
 
+### Loading in data
 load in the lat_log_fishes.csv and endurance_of_clownfish.csv
 ```{r}
 endurance_clownfish <- read_csv("data/endurance_of_clownfish.csv") %>% clean_names()
-long_lat_fishes <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
+long_lat <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
 ```
-make a shiny app which compares the distance vs speed of the clownfish with the stand_dph being a slider input
+
+summarize 
+```{r}
+long_lat %>% 
+  group_by(species) %>% 
+  summarize(max_lat=max(latitude), min_lat=min(latitude), max_long=max(longitude), min_long=min(longitude))
+```
+
+All the libraries 
+```{r}
+library(ggplot2)
+library(ggmap)
+library(shiny)
+library(shinydashboard)
+library(shinythemes)
+```
+
+## lianas maps with my api key
+```{r}
+register_stadiamaps("API", write = FALSE)
+```
+
+    ### Clownfish distrubution map
+```{r}
+# Filter df for the species 'Amphiprion percula' in Australia
+long_lat_australia <- long_lat[long_lat$species == 'Amphiprion percula',]
+
+# Define the bounding box for Australia
+lat_range <- c(-43.00311, -10.062805)  # Australia's approximate latitudinal range
+long_range <- c(113.6594, 153.61194)   # Australia's approximate longitudinal range
+bbox_australia <- c(left = min(long_range), bottom = min(lat_range), right = max(long_range), top = max(lat_range))
+
+# Get the base map for the bounding box area
+map_australia <- get_stadiamap(bbox = bbox_australia, maptype = "stamen_terrain", zoom = 6)
+
+# Plot the base map with points from long_lat_australia
+ggmap(map_australia) +
+  geom_point(data = long_lat_australia, aes(x = longitude, y = latitude, color = species), size = 1.5) +
+  scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Amphiprion percula in Australia") +
+  theme(legend.position = "none")
+```
+    ### Blue tang distribution map
+```{r}
+library(ggplot2)
+library(ggmap)
+
+# Filter df for the species 'Paracanthurus hepatus'
+long_lat_paracanthurus <- long_lat[long_lat$species == 'Paracanthurus hepatus',]
+
+# Define the bounding box based on the min and max ranges of longitude and latitude for 'Paracanthurus hepatus'
+
+lat_range_paracanthurus <- range(long_lat_paracanthurus$latitude)
+long_range_paracanthurus <- range(long_lat_paracanthurus$longitude)
+bbox_paracanthurus <- c(left = min(long_range_paracanthurus), bottom = min(lat_range_paracanthurus), 
+                       right = max(long_range_paracanthurus), top = max(lat_range_paracanthurus))
+
+# Get the base map for the bounding box area
+map_paracanthurus <- get_stadiamap(bbox = bbox_paracanthurus, maptype = "stamen_terrain", zoom = 4)
+
+# Plot the base map with points from df_paracanthurus
+ggmap(map_paracanthurus) +
+  geom_point(data = long_lat_paracanthurus, aes(x = longitude, y = latitude), color = "blue", size = 1) +
+  labs(title = "Distribution of Paracanthurus hepatus") +
+  theme(legend.position = "none")
+```
+
+
+    ### map of both species
+```{r}
+library(ggplot2)
+library(ggmap)
+
+# Define the bounding box based on the min and max ranges of longitude and latitude for both species
+lat_range <- range(long_lat$latitude)
+long_range <- range(long_lat$longitude)
+bbox_species <- c(left = min(long_range), bottom = min(lat_range), 
+                  right = max(long_range), top = max(lat_range))
+
+# Get the base map for the bounding box area
+map_species <- get_stadiamap(bbox = bbox_species, maptype = "stamen_terrain", zoom = 3)
+
+# Plot the base map with points from df for both species
+ggmap(map_species) +
+  geom_point(data = long_lat, aes(x = longitude, y = latitude, color = species), size = 1, alpha=0.7) +
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+  theme(legend.position = "bottom")
+```
+
+
+### Graphs I made for the shiny app
+```{r}
+both_species <- long_lat %>% 
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+  theme(legend.position = "bottom")
+both_species
+```
+
+```{r}
+clownfish <- long_lat %>% 
+  filter(species=="Amphiprion percula") %>%
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+  theme(legend.position = "bottom")
+clownfish
+```
+
+```{r}
+cf <- long_lat %>% 
+  filter(species=="Amphiprion percula")
+```
+
+
+
+```{r}
+bluetang <- long_lat %>% 
+  filter(species=="Paracanthurus hepatus") %>%
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue")) +
+  labs(title = "Distribution of Species") +
+  theme(legend.position = "bottom")
+bluetang
+```
+
+```{r}
+bt <- long_lat %>% 
+  filter(species=="Paracanthurus hepatus")
+```
+
+### distance from sydney to great barrier reef
+```{r}
+# Install and load necessary packages if not already installed
+if (!require("geosphere")) install.packages("geosphere")
+library(geosphere)
+
+
+# Example coordinates for testing with a smaller latitude range
+# Example coordinates for debugging
+# Example simplified coordinates
+sydney_coords <- c(-33.8688, 151.2093)  # Latitude and longitude for Sydney
+gbr_coords <- c(-16.5000, 145.7500)      # Latitude and longitude for Great Barrier Reef
+
+# Manually calculate distance by subtracting coordinates
+distance <- sqrt(sum((gbr_coords - sydney_coords)^2))
+print(distance)
+
+
+# Create a data frame for the two locations to plot
+locations <- data.frame(
+  name = c("Sydney", "Great Barrier Reef"),
+  latitude = c(sydney_coords[1], gbr_coords[1]),
+  longitude = c(sydney_coords[2], gbr_coords[2])
+)
+
+# Plot the map with the two points and a line representing the distance
+ggplot() +
+  geom_point(data = locations, aes(x = longitude, y = latitude, color = name), size = 4) +
+  geom_line(data = locations, aes(x = longitude, y = latitude, group = 1), color = "black", size = 1) +
+  theme_minimal() +
+  labs(title = "Distance from Sydney to the Great Barrier Reef", subtitle = paste("Distance:", round(distance / 1000, 2), "km")) +
+  scale_color_manual(values = c("Sydney" = "violetred", "Great Barrier Reef" = "gold3")) +
+  theme(legend.position = "bottom")
+```
+
+
+
+### make a shiny app from the code chunks above on one tab only with an option to choose all species, the clownfish or the blue tang as a dropdown menu
+```{r}
+ui <- dashboardPage(
+  dashboardHeader(title = "Title of Prez"),
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Maps", tabName = "maps", icon = icon("map"))
+    )
+  ),
+  dashboardBody(
+    fluidPage(titlePanel("Distribution Maps")),
+    fluidRow(
+      box(
+        title = "Distribution",
+        width = 3,
+        radioButtons("plotType", "Select a Distribution", choices = c("Both Species", "Clown Fish", "Blue Tang"), selected = "Both Species")
+      ),
+      box(width = 9, height = 5, plotOutput("Distributionplot")),
+      )
+    )
+)
+
+server <- function(input, output, session) {
+  session$onSessionEnded(stopApp)
+  output$DistrubutionPlot <- renderPlot({
+    selected_plot <- switch(input$plotType,
+      "Both" = both_species,
+      "Clownfish" = clownfish,
+      "Blue Tang" = bluetang
+    )
+
+    print(selected_plot)
+  })
+}
+
+shinyApp(ui, server)
+```
+
+### Possible other server code
+
+server <- function(input, output, session) {
+  output$Distrubutionplot <- renderPlot({
+    plot_type <- input$plotType
+    if (plot_type == "both_species") {
+      ggplot(both_species, aes(x = x, y = y)) +
+        geom_point() +
+        labs(title = "Distribution of Both Species")
+    } else if (plot_type == "clownfish") {
+      ggplot(clownfish, aes(x = x, y = y)) +
+        geom_line() +
+        labs(title = "Distribution of Clown Fish")
+    } else if (plot_type == "bluetang") {
+      ggplot(bluetang, aes(x = x, y = y)) +
+        geom_bar(stat = "identity") +
+        labs(title = "Distribution of Blue Tang")
+    }
+  })
+
+write a shiny app that allows me to see the different distrubution graphs above labeled as blue tang, clownfish, and both species, with a radiobutton as the reacitve factor to select the coloring of the graph. 
+
+
+
+### Official Shiny App
+```{r}
+library(shiny)
+library(shinydashboard)
+library(shinythemes)
+library(ggplot2)
+
+ui <- dashboardPage(
+  dashboardHeader(title = "Summary", titleWidth = 400),
+  dashboardSidebar(disable = TRUE),
+  dashboardBody(
+titlePanel("Finding Nemo: How Far Did They Go?"),
+    tabBox( width=2000, 
+      title = "Pick Your Graph!",
+      id = "tabs",
+      tabPanel("Distrubution",
+        box(
+          title = "Options",
+          width = 1000,
+          height = 200,
+          selectInput(
+            "scatterplot_choice",
+            "Select a Distribution",
+            choices = c("Both Species", "Clown Fish", "Blue Tang"),
+            selected = "Both Species"
+              )
+            ),
+            box(
+              width = 1000,
+              height = 600,
+              plotOutput("selected_scatterplot")
+            )
+          ),
+          tabPanel("Distance",
+            box(
+              width = 500,
+              height = 400,
+              plotOutput("Distanceplot")
+            )
+          )
+        )
+      )
+    )
+
+
+
+
+server <- function(input, output) {
+
+  selected_scatterplot <- reactive({
+   switch(input$scatterplot_choice,
+           "Both Species" = ggplot(long_lat, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+             labs(title = "Both Species")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme(legend.position = "bottom"),
+           "Clown Fish" = ggplot(cf, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+             labs(title = "Clown Fish")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme(legend.position = "bottom"),
+           "Blue Tang" = ggplot(bt, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Paracanthurus hepatus' = "blue")) +
+             labs(title = "Blue Tang")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme(legend.position = "bottom")
+    )
+  })
+
+
+  output$selected_scatterplot <- renderPlot({
+    selected_scatterplot()
+  })
+
+
+ Distanceplot <- reactive({
+
+ggplot() +
+  geom_point(data = locations, aes(x = longitude, y = latitude, color = name), size = 4) +
+  geom_line(data = locations, aes(x = longitude, y = latitude, group = 1), color = "black", size = 1) +
+  theme_minimal() +
+  labs(title = "Distance from Sydney to the Great Barrier Reef", subtitle = paste("Distance:", round(distance / 1000, 2), "km")) +
+  theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+  scale_color_manual(values = c("Sydney" = "violetred", "Great Barrier Reef" = "gold3")) +
+  theme(legend.position = "bottom")
+
+  })
+
+
+  output$Distanceplot <- renderPlot({
+    Distanceplot()
+  })
+}
+
+
+shinyApp(ui, server)
+```
 
 
