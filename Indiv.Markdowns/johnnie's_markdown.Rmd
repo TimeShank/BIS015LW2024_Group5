@@ -15,6 +15,12 @@ getwd()
 ```
 
 ### Libraries
+
+```{r}
+install.packages("imager")
+```
+
+
 ```{r}
 #install.packages("luberdate")
 
@@ -22,10 +28,12 @@ getwd()
 #library(shinydashboard)
 #library(shiny)
 #library(luberdate)
-#library("tidyverse")
+library("tidyverse")
 #library("janitor")
 #library(RColorBrewer)
 #library(paletteer)
+#library(ggmap)
+library(imager)
 ```
 
 ### How to present ###
@@ -39,14 +47,12 @@ In combination to details such as, the fish ridding the East Australian current,
 We can present the data using R,an app, and powerpoints. I suggest taking code chunks and graphs, maps, etc and inserting it into the powerpoint, as well as making the app accessable via a web ling that we can include in the powerpoint
 
 
-### Finding Nemo story
+### Finding Nemo - Marlin's journey:
 After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
-
 Nemo and Marlin live in a sea anemone near the Great Barrier Reef. This is where Nemo was taken.
 
 Marlin pursues the boat
 
-*Marlin's journey*: 
 
 1) bumps into Dory, a blue tang with acute short-term memory loss, who offers her help
 
@@ -64,25 +70,36 @@ Marlin pursues the boat
 
 8) A pelican named Nigel takes them to Sherman's office
 
-## Questions
+## Questions to consider
 
 Can a clounfish and a blue tang swim all the way from the great barrier reef to sydney?
+
 Where is sydney? - Australia *we should be specific*
+
 How far is sydney from the great barrier reef?
+
 What is the endurance of a clownfish?
+
 How fast can a clownfish swim?
+
 What type of clownfish?
+
 How soon do the fish need to reach nemo?
+
 Where do clownfish and blue tangs coexist?
-How would clownfish and blue tangs coexist
-How likely are these fish to survive an encounter with those sharks?
-What type of sharks?
-How likely are these fish to survive an angler fish?
-Type of anglerfish?
-Survival with jellyfish?
+
+How would clownfish and blue tangs coexist?
+
+
+
+
+
 Where is the East Australian Current and how fast does it go? - 7km/hr
-Location of the EA current exit and sydney harbo?
-Blue whale speed?
+- transports a staggering 30 million cubic metres of water southward each second at speeds of up to seven kilometres per hour. The current can be up to 100 kilometres wide and 1.5 kilometress deep.
+
+Location of the EA current exit and sydney harbor?
+
+Blue whale speed? - Blue whales typically swim at about 5 miles an hour while they are feeding and traveling, but can accelerate to more than 20 miles an hour for short bursts.
 
 Fish Species:
   Marlin & Nemo - "Clownfish" - Either *Amphiprion ocellaris* or Amphiprion percula.
@@ -91,9 +108,13 @@ Fish Species:
   Sharks - 
   Whale - 
 
-Gender?
-Age?
 
+
+*What questions could we explore in the future?*
+Survival with jellyfish?
+How likely are these fish to survive an angler fish?
+How likely are these fish to survive an encounter with sharks?
+Does gender or age play a role in swimming speed or endurance?
 
 ## Sources
 
@@ -107,8 +128,82 @@ Age?
 *East Australian Current*
 (https://theconversation.com/can-you-surf-the-east-australian-current-finding-nemo-style-27392)
 
+(https://www.abc.net.au/science/articles/2015/01/19/4164545.htm#:~:text=The%20current%20transports%20a%20staggering,the%20effects%20of%20climate%20change.)
+
+*Blue whale swim speed* (https://www.fisheries.noaa.gov/species/blue-whale)
+
 
 ## Data frames
+
+
+## Code
+
+```{r}
+lat_aus <- c(-40.00, -15.00)
+long_aus <- c(147.20, 160.30)
+bbox_aus <- make_bbox(long_aus, lat_aus, f = 0.03) #f is the fraction of the bounding box to add to the range. Makes the map this much bigger
+```
+
+*Register key*
+```{r}
+register_stadiamaps("f708f72b-d437-4865-ae4b-24b90ace44ec", write = FALSE)
+```
+
+*Get base map*
+```{r}
+map_aus <- get_stadiamap(bbox_aus, maptype = "stamen_terrain", zoom=5)
+```
+
+*Display base map*
+```{r}
+ggmap(map_aus)
+```
+
+```{r}
+aus_current <- load.image("C:/Users/Johnn/Desktop/BIS_015L_Project/data/nemocurrent.jpg")
+```
+```{r}
+endurance <- read_csv("data/endurance_of_clownfish.csv")
+```
+
+```{r}
+endurance <- data.frame(date=endurance$date, species=endurance$species, batch_id=endurance$batch_id, days_post_hatch=endurance$dph,percent_settlment_age=endurance$stand_dph, speed=endurance$speed, swim_duration_in_secconds=endurance$time_sec, dist_swam_in_cm=endurance$dist_cm, total_length=endurance$tl, standard_length=endurance$sl, body_depth=endurance$bd, propulsive_area=endurance$pa)
+```
+
+
+```{r}
+endurance %>% 
+  select(days_post_hatch,percent_settlment_age,speed,swim_duration_in_secconds,dist_swam_in_cm,total_length,standard_length,body_depth)
+```
+
+Does longer swim durration mean greater distance?
+Does faster speed mean greater distance?
+Does length, age, or body depth affect distance?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

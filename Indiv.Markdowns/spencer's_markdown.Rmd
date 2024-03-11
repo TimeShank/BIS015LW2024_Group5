@@ -21,6 +21,8 @@ library(visdat)
 library(RColorBrewer)
 # install.packages("paletteer")
 library(paletteer)
+library(RColorBrewer)
+library(ggthemes)
 ```
     Turn off scientific notation
 ```{r}
@@ -34,8 +36,13 @@ clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv")
 
 ```{r}
 clownfish_endurance %>%
-  ggplot(aes(log10(dist_cm))) +
-  geom_density(color = "black", fill = "purple3") 
+  ggplot(aes(speed)) +
+  geom_histogram(bins = 5, color= "black", fill = "orange", alpha = 0.8) + 
+  labs(title = "Speed of Clownfish", x = "Speed (cm/sec)", y = "Frequency") + 
+  theme_economist() + 
+  theme(plot.title = element_text(hjust = 0.5))
+  
+  
 #speed is in cm per second 
 ```
 
@@ -47,11 +54,42 @@ clownfish_endurance %>%
 ```
 
 
-```{r}
+```{r} 
+# move graph legend to the left, title to the middle
+
+
 clownfish_endurance %>%
   filter(dist_cm != "NA") %>%
-  ggplot(aes(speed)) +
-  geom_density(color = "black", fill = "") 
+  ggplot(aes(x= log10(dist_cm), y=log10(time_sec), color = speed)) +
+  geom_point() +
+  theme_economist() + 
+  labs(title = "Clownfish Endurance", x = "log10 Distance (cm)", y = "log10 Time (sec)", color = "Speed (cm/sec)") + 
+  theme(legend.position = "right") + 
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
+```{r}
+clownfish_endurance_2 <- clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  select(speed, dist_cm, time_sec) %>%
+  mutate(dist_km = dist_cm / 100000) %>%
+  mutate(time_hr = time_sec / 3600) %>%
+  arrange(-dist_km)
+```
+
+```{r}
+clownfish_endurance_2 %>%
+  select(dist_km, time_hr) %>%
+  mutate(speed_km_hr = dist_km / time_hr) %>%
+  arrange(-dist_km)
+```
+
+```{r}
+clownfish_endurance %>%
+    filter(tl != "NA") %>%
+  ggplot(aes(tl)) + 
+  geom_density(fill= "orange", alpha = 0.7) + 
+  theme_economist() + 
+  labs(title = "Total Length of Clownfish", x = "Total Length (cm)", y = "Density") 
+```
 
