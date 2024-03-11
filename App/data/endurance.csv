@@ -1,0 +1,792 @@
+date,location,species,batch_id,dph,stand_dph,speed,time_sec,dist_cm,TL,SL,BD,PA
+2014/07/14,Boston University Lab,Elacatinus lori,46,0,0,2,9,18,nd,nd,nd,nd
+2014/07/14,Boston University Lab,Elacatinus lori,46,0,0,4,5,20,nd,nd,nd,nd
+2014/07/14,Boston University Lab,Elacatinus lori,46,0,0,6,2,12,nd,nd,nd,nd
+2014/07/14,Boston University Lab,Elacatinus lori,46,0,0,8,35,280,nd,nd,nd,nd
+2014/07/14,Boston University Lab,Elacatinus lori,46,0,0,10,9,90,nd,nd,nd,nd
+2014/07/15,Boston University Lab,Elacatinus lori,198,0,0,2,47,94,3.54,3.36,0.48,0.94
+2014/07/15,Boston University Lab,Elacatinus lori,198,0,0,4,60,240,3.25,3.09,0.47,nd
+2014/07/15,Boston University Lab,Elacatinus lori,198,0,0,6,4,24,3.64,3.47,0.52,1.04
+2014/07/15,Boston University Lab,Elacatinus lori,198,0,0,8,0,0,nd,nd,nd,nd
+2014/07/15,Boston University Lab,Elacatinus lori,198,0,0,10,1,10,nd,nd,nd,nd
+2014/07/20,Boston University Lab,Elacatinus colini,70,0,0,2,1955,3910,nd,nd,nd,nd
+2014/07/20,Boston University Lab,Elacatinus colini,70,0,0,4,430,1720,nd,nd,nd,nd
+2014/07/20,Boston University Lab,Elacatinus colini,70,0,0,6,0,0,nd,nd,nd,nd
+2014/07/20,Boston University Lab,Elacatinus colini,70,0,0,8,114,912,nd,nd,nd,nd
+2014/07/20,Boston University Lab,Elacatinus colini,70,0,0,10,0,0,nd,nd,nd,nd
+2014/07/24,Boston University Lab,Elacatinus lori,46,10,0.33,2,224,448,nd,nd,nd,nd
+2014/07/24,Boston University Lab,Elacatinus lori,46,10,0.33,4,228,912,nd,nd,nd,nd
+2014/07/24,Boston University Lab,Elacatinus lori,46,10,0.33,6,130,780,nd,nd,nd,nd
+2014/07/24,Boston University Lab,Elacatinus lori,46,10,0.33,8,123,984,nd,nd,nd,nd
+2014/07/24,Boston University Lab,Elacatinus lori,46,10,0.33,10,0,0,nd,nd,nd,nd
+2014/07/28,Boston University Lab,Elacatinus colini,78,0,0,4,128,512,nd,nd,nd,nd
+2014/07/28,Boston University Lab,Elacatinus colini,78,0,0,6,135,810,nd,nd,nd,nd
+2014/07/28,Boston University Lab,Elacatinus colini,78,0,0,8,124,992,nd,nd,nd,nd
+2014/07/28,Boston University Lab,Elacatinus colini,78,0,0,10,0,0,nd,nd,nd,nd
+2014/07/30,Boston University Lab,Elacatinus colini,70,10,0.33,2,272,544,nd,nd,nd,nd
+2014/07/30,Boston University Lab,Elacatinus colini,70,10,0.33,4,47,188,5.6,5.08,0.72,2.65
+2014/07/30,Boston University Lab,Elacatinus colini,70,10,0.33,6,50,300,4.85,4.6,0.59,1.91
+2014/07/30,Boston University Lab,Elacatinus colini,70,10,0.33,8,0,0,nd,nd,nd,nd
+2014/07/30,Boston University Lab,Elacatinus colini,70,10,0.33,10,20,200,nd,nd,nd,nd
+2014/08/01,Boston University Lab,Elacatinus colini,68,0,0,2,1621,3242,nd,nd,nd,nd
+2014/08/01,Boston University Lab,Elacatinus colini,68,0,0,4,0,0,nd,nd,nd,nd
+2014/08/01,Boston University Lab,Elacatinus colini,68,0,0,6,21,126,nd,nd,nd,nd
+2014/08/01,Boston University Lab,Elacatinus colini,68,0,0,8,13,104,nd,nd,nd,nd
+2014/08/01,Boston University Lab,Elacatinus colini,68,0,0,10,1,10,nd,nd,nd,nd
+2014/08/03,Boston University Lab,Elacatinus colini,204,0,0,2,62,124,nd,nd,nd,nd
+2014/08/03,Boston University Lab,Elacatinus colini,204,0,0,4,12,48,nd,nd,nd,nd
+2014/08/03,Boston University Lab,Elacatinus colini,204,0,0,6,31,186,nd,nd,nd,nd
+2014/08/03,Boston University Lab,Elacatinus colini,204,0,0,8,0,0,nd,nd,nd,nd
+2014/08/03,Boston University Lab,Elacatinus colini,204,0,0,10,0,0,nd,nd,nd,nd
+2014/08/07,Boston University Lab,Elacatinus colini,78,10,0.33,2,289,578,nd,nd,nd,nd
+2014/08/07,Boston University Lab,Elacatinus colini,78,10,0.33,4,128,512,nd,nd,nd,nd
+2014/08/07,Boston University Lab,Elacatinus colini,78,10,0.33,6,8,48,nd,nd,nd,nd
+2014/08/07,Boston University Lab,Elacatinus colini,78,10,0.33,8,2,16,nd,nd,nd,nd
+2014/08/07,Boston University Lab,Elacatinus colini,78,10,0.33,10,1,10,nd,nd,nd,nd
+2014/08/09,Boston University Lab,Elacatinus colini,60,0,0,2,22,44,nd,nd,nd,nd
+2014/08/09,Boston University Lab,Elacatinus colini,60,0,0,4,0,0,nd,nd,nd,nd
+2014/08/09,Boston University Lab,Elacatinus colini,60,0,0,6,4,24,nd,nd,nd,nd
+2014/08/09,Boston University Lab,Elacatinus colini,60,0,0,8,0,0,nd,nd,nd,nd
+2014/08/09,Boston University Lab,Elacatinus colini,60,0,0,10,0,0,nd,nd,nd,nd
+2014/08/11,Boston University Lab,Elacatinus colini,68,10,0.33,2,3320,6640,4.71,4.39,0.64,1.88
+2014/08/11,Boston University Lab,Elacatinus colini,68,10,0.33,4,75,300,nd,nd,nd,nd
+2014/08/11,Boston University Lab,Elacatinus colini,68,10,0.33,6,60,360,nd,nd,nd,nd
+2014/08/11,Boston University Lab,Elacatinus colini,68,10,0.33,8,152,1216,4.71,4.33,0.54,1.78
+2014/08/11,Boston University Lab,Elacatinus colini,68,10,0.33,10,15,150,5.54,5.03,0.69,2.48
+2014/08/17,Boston University Lab,Elacatinus colini,78,20,0.67,2,1527,3054,nd,nd,nd,nd
+2014/08/17,Boston University Lab,Elacatinus colini,78,20,0.67,4,73,292,nd,nd,nd,nd
+2014/08/17,Boston University Lab,Elacatinus colini,78,20,0.67,6,420,2520,nd,nd,nd,nd
+2014/08/17,Boston University Lab,Elacatinus colini,78,20,0.67,8,47,376,nd,nd,nd,nd
+2014/08/17,Boston University Lab,Elacatinus colini,78,20,0.67,10,21,210,nd,nd,nd,nd
+2014/08/18,Boston University Lab,Elacatinus colini,60,10,0.33,2,467,934,nd,nd,nd,nd
+2014/08/18,Boston University Lab,Elacatinus colini,60,10,0.33,4,84,336,nd,nd,nd,nd
+2014/08/18,Boston University Lab,Elacatinus colini,60,10,0.33,6,24,144,nd,nd,nd,nd
+2014/08/18,Boston University Lab,Elacatinus colini,60,10,0.33,8,11,88,nd,nd,nd,nd
+2014/08/18,Boston University Lab,Elacatinus colini,60,10,0.33,10,4,40,nd,nd,nd,nd
+2014/08/20,Boston University Lab,Elacatinus colini,68,20,0.67,2,6381,12762,nd,nd,nd,nd
+2014/08/20,Boston University Lab,Elacatinus colini,68,20,0.67,4,647,2588,nd,nd,nd,nd
+2014/08/20,Boston University Lab,Elacatinus colini,68,20,0.67,6,277,1662,nd,nd,nd,nd
+2014/08/20,Boston University Lab,Elacatinus colini,68,20,0.67,8,58,464,nd,nd,nd,nd
+2014/08/20,Boston University Lab,Elacatinus colini,68,20,0.67,10,5,50,nd,nd,nd,nd
+2014/08/27,Boston University Lab,Elacatinus colini,78,30,1,4,398,1592,nd,nd,nd,nd
+2014/08/27,Boston University Lab,Elacatinus colini,78,30,1,6,144,864,nd,nd,nd,nd
+2014/08/27,Boston University Lab,Elacatinus colini,78,30,1,8,145,1160,nd,nd,nd,nd
+2014/08/27,Boston University Lab,Elacatinus colini,78,30,1,10,16,160,nd,nd,nd,nd
+2014/08/28,Boston University Lab,Elacatinus colini,60,20,0.67,2,5122,10244,nd,nd,nd,nd
+2014/08/28,Boston University Lab,Elacatinus colini,60,20,0.67,4,888,3552,nd,nd,nd,nd
+2014/08/28,Boston University Lab,Elacatinus colini,60,20,0.67,6,107,642,nd,nd,nd,nd
+2014/08/28,Boston University Lab,Elacatinus colini,60,20,0.67,8,20,160,nd,nd,nd,nd
+2014/08/28,Boston University Lab,Elacatinus colini,60,20,0.67,10,17,170,nd,nd,nd,nd
+2014/08/31,Boston University Lab,Elacatinus colini,68,30,1,4,352,1408,nd,nd,nd,nd
+2014/08/31,Boston University Lab,Elacatinus colini,68,30,1,6,1101,6606,nd,nd,nd,nd
+2014/08/31,Boston University Lab,Elacatinus colini,68,30,1,8,109,872,nd,nd,nd,nd
+2014/08/31,Boston University Lab,Elacatinus colini,68,30,1,10,280,2800,nd,nd,nd,nd
+2014/12/16,Boston University Lab,Elacatinus lori,198,0,0,2,228,456,nd,nd,nd,nd
+2014/12/16,Boston University Lab,Elacatinus lori,198,0,0,4,112,448,3.73,3.54,0.47,1.17
+2014/12/16,Boston University Lab,Elacatinus lori,198,0,0,6,33,198,3.71,3.55,0.54,1.18
+2014/12/16,Boston University Lab,Elacatinus lori,198,0,0,8,32,256,nd,nd,nd,nd
+2014/12/16,Boston University Lab,Elacatinus lori,198,0,0,10,0,0,nd,nd,nd,nd
+2014/12/26,Boston University Lab,Elacatinus lori,198,10,0.33,2,4200,8400,5.23,4.86,0.77,2.32
+2014/12/26,Boston University Lab,Elacatinus lori,198,10,0.33,4,137,548,6.01,5.44,0.82,3.08
+2014/12/26,Boston University Lab,Elacatinus lori,198,10,0.33,6,171,1026,5.54,5,0.77,2.57
+2014/12/26,Boston University Lab,Elacatinus lori,198,10,0.33,8,35,280,5.57,5.09,0.79,2.66
+2014/12/26,Boston University Lab,Elacatinus lori,198,10,0.33,10,0,0,5.33,4.87,0.71,2.14
+2015/01/05,Boston University Lab,Elacatinus lori,198,20,0.67,2,590,1180,nd,nd,nd,nd
+2015/01/05,Boston University Lab,Elacatinus lori,198,20,0.67,4,122,488,nd,nd,nd,nd
+2015/01/05,Boston University Lab,Elacatinus lori,198,20,0.67,6,47,282,nd,nd,nd,nd
+2015/01/05,Boston University Lab,Elacatinus lori,198,20,0.67,8,32,256,nd,nd,nd,nd
+2015/01/05,Boston University Lab,Elacatinus lori,198,20,0.67,10,0,0,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,104,0,0,2,56,112,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,104,0,0,4,45,180,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,104,0,0,6,15,90,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,104,0,0,8,0,0,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,104,0,0,10,0,0,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,198,30,1,2,1620,3240,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,198,30,1,4,392,1568,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,198,30,1,6,72,432,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,198,30,1,8,39,312,nd,nd,nd,nd
+2015/01/15,Boston University Lab,Elacatinus lori,198,30,1,10,0,0,nd,nd,nd,nd
+2015/01/25,Boston University Lab,Elacatinus lori,104,10,0.33,2,2044,4088,nd,nd,0.59,1.56
+2015/01/25,Boston University Lab,Elacatinus lori,104,10,0.33,4,479,1916,5.66,5.15,0.76,2.56
+2015/01/25,Boston University Lab,Elacatinus lori,104,10,0.33,6,68,408,5.06,4.61,0.69,1.9
+2015/01/25,Boston University Lab,Elacatinus lori,104,10,0.33,8,59,472,4.62,4.32,0.64,1.75
+2015/01/25,Boston University Lab,Elacatinus lori,104,10,0.33,10,0,0,nd,nd,nd,nd
+2015/02/26,Boston University Lab,Elacatinus lori,200,0,0,2,126,252,nd,nd,nd,nd
+2015/02/26,Boston University Lab,Elacatinus lori,200,0,0,4,26,104,nd,nd,nd,nd
+2015/02/26,Boston University Lab,Elacatinus lori,200,0,0,6,21,126,nd,nd,nd,nd
+2015/02/26,Boston University Lab,Elacatinus lori,200,0,0,8,0,0,nd,nd,nd,nd
+2015/02/26,Boston University Lab,Elacatinus lori,200,0,0,10,0,0,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,2,885,1770,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,4,162,648,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,6,203,1218,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,8,41,328,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,10,10,100,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,2,1387,2774,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,4,388,1552,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,6,225,1350,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,8,68,544,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,10,48,480,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,2,1548,3096,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,4,1312,5248,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,6,255,1530,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,8,286,2288,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,10,72,720,nd,nd,nd,nd
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,nd,nd,nd,4.68,4.43,1.03,3.13
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,nd,nd,nd,4.72,4.45,1.01,2.92
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,nd,nd,nd,4.71,4.46,0.96,3
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,nd,nd,nd,4.61,4.36,1.02,3.16
+2015/03/07,Boston University Lab,Amphiprion percula,B 2:4,0,0,nd,nd,nd,4.85,4.62,1.04,3.23
+2015/03/08,Boston University Lab,Elacatinus lori,200,10,0.33,2,1150,2300,5.25,4.85,0.72,2.36
+2015/03/08,Boston University Lab,Elacatinus lori,200,10,0.33,4,921,3684,5.64,5.15,0.78,2.53
+2015/03/08,Boston University Lab,Elacatinus lori,200,10,0.33,6,326,1956,5.67,5.19,0.73,2.59
+2015/03/08,Boston University Lab,Elacatinus lori,200,10,0.33,8,53,424,5.53,5.07,0.73,2.49
+2015/03/08,Boston University Lab,Elacatinus lori,200,10,0.33,10,29,290,5.5,5.05,0.74,2.4
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,2,4374,8748,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,4,7025,28100,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,6,1223,7338,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,8,853,6824,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,10,221,2210,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,2,11441,22882,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,4,9450,37800,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,6,1782,10692,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,8,3108,24864,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,10,362,3620,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,2,12206,24412,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,4,14350,57400,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,6,4128,24768,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,8,4069,32552,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,10,384,3840,nd,nd,nd,nd
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,nd,nd,nd,6.23,5.27,1.79,6.96
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,nd,nd,nd,6.43,5.39,1.78,6.78
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,nd,nd,nd,6.46,5.42,1.74,7.34
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,nd,nd,nd,6.15,5.07,1.7,6.59
+2015/03/11,Boston University Lab,Amphiprion percula,B 2:4,4,0.5,nd,nd,nd,4.43,3.95,1.13,2.96
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,2,149828,299656,nd,nd,nd,nd
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,4,241860,967440,nd,nd,nd,nd
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,10,87240,872400,nd,nd,nd,nd
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,nd,nd,nd,7.66,6.14,2.14,12.64
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,nd,nd,nd,7.86,6.34,2.22,12.42
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,nd,nd,nd,7.57,6.1,2.25,11.97
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,nd,nd,nd,7.7,6.23,2.12,12.31
+2015/03/15,Boston University Lab,Amphiprion percula,B 2:4,8,1,nd,nd,nd,8,6.49,2.29,13.65
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,2,332,664,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,4,173,692,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,6,168,1008,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,8,0,0,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,10,0,0,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,2,2604,5208,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,4,396,1584,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,6,221,1326,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,8,0,0,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,10,0,0,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,2,1524,3048,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,4,1148,4592,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,6,462,2772,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,8,154,1232,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,10,0,0,nd,nd,nd,nd
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,nd,nd,nd,4.76,4.49,1.07,3.19
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,nd,nd,nd,4.76,4.5,1.04,3.12
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,nd,nd,nd,4.82,4.54,1.11,3.14
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,nd,nd,nd,4.81,4.54,1.08,3.1
+2015/03/18,Boston University Lab,Amphiprion percula,C 2:4,0,0,nd,nd,nd,4.71,4.49,1.03,2.92
+2015/03/18,Boston University Lab,Elacatinus lori,200,20,0.67,2,639,1278,6.28,5.65,0.84,2.85
+2015/03/18,Boston University Lab,Elacatinus lori,200,20,0.67,4,293,1172,7.06,6.31,1.01,4
+2015/03/18,Boston University Lab,Elacatinus lori,200,20,0.67,6,233,1398,7.09,6.37,1.01,4.19
+2015/03/18,Boston University Lab,Elacatinus lori,200,20,0.67,8,18,144,7.28,6.52,1.07,4.39
+2015/03/18,Boston University Lab,Elacatinus lori,200,20,0.67,10,38,380,nd,nd,nd,nd
+2015/03/20,Boston University Lab,Elacatinus lori,46,0,0,2,305,610,nd,nd,nd,nd
+2015/03/20,Boston University Lab,Elacatinus lori,46,0,0,4,255,1020,nd,nd,nd,nd
+2015/03/20,Boston University Lab,Elacatinus lori,46,0,0,6,26,156,nd,nd,nd,nd
+2015/03/20,Boston University Lab,Elacatinus lori,46,0,0,8,0,0,nd,nd,nd,nd
+2015/03/20,Boston University Lab,Elacatinus lori,46,0,0,10,0,0,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,2,1857,3714,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,4,13927,55708,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,6,3987,23922,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,8,1102,8816,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,10,369,3690,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,2,7560,15120,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,4,9180,36720,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,6,7237,43422,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,8,2214,17712,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,10,478,4780,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,2,19020,38040,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,4,25560,102240,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,6,10758,64548,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,8,2860,22880,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,10,529,5290,nd,nd,nd,nd
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,nd,nd,nd,5.58,4.75,1.67,5.84
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,nd,nd,nd,6.21,5.19,1.73,6.52
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,nd,nd,nd,6.25,5.25,1.75,6.76
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,nd,nd,nd,6.34,5.3,1.72,6.76
+2015/03/22,Boston University Lab,Amphiprion percula,C 2:4,4,0.5,nd,nd,nd,5.81,4.89,1.66,5.69
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,4,33470,133880,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,4,57522,230088,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,4,85626,342504,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,6,649320,3895920,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,6,835800,5014800,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,6,908460,5450760,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,10,468420,4684200,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,10,629280,6292800,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,10,641160,6411600,nd,nd,nd,nd
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,nd,nd,nd,6.87,5.54,2.06,9.28
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,nd,nd,nd,7.38,5.87,2.2,11.8
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,nd,nd,nd,7.54,6.13,2.16,11.49
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,nd,nd,nd,6.71,5.38,2.02,9.32
+2015/03/26,Boston University Lab,Amphiprion percula,C 2:4,8,1,nd,nd,nd,7.23,5.84,2.07,10.15
+2015/03/28,Boston University Lab,Elacatinus lori,200,30,1,2,3565,7130,7.68,7.07,1.2,4.93
+2015/03/28,Boston University Lab,Elacatinus lori,200,30,1,4,1020,4080,nd,nd,nd,nd
+2015/03/28,Boston University Lab,Elacatinus lori,200,30,1,6,30,180,nd,nd,nd,nd
+2015/03/28,Boston University Lab,Elacatinus lori,200,30,1,8,14,112,nd,nd,nd,nd
+2015/03/28,Boston University Lab,Elacatinus lori,200,30,1,10,20,200,8.83,7.64,1.34,6.56
+2015/03/30,Boston University Lab,Elacatinus lori,46,10,0.33,2,1485,2970,nd,nd,nd,nd
+2015/03/30,Boston University Lab,Elacatinus lori,46,10,0.33,4,210,840,4.83,4.44,0.63,1.92
+2015/03/30,Boston University Lab,Elacatinus lori,46,10,0.33,6,75,450,nd,nd,nd,nd
+2015/03/30,Boston University Lab,Elacatinus lori,46,10,0.33,8,36,288,nd,nd,nd,nd
+2015/03/30,Boston University Lab,Elacatinus lori,46,10,0.33,10,0,0,nd,nd,nd,nd
+2015/04/09,Boston University Lab,Elacatinus lori,46,20,0.67,2,7201,14402,nd,nd,nd,nd
+2015/04/09,Boston University Lab,Elacatinus lori,46,20,0.67,4,652,2608,nd,nd,nd,nd
+2015/04/09,Boston University Lab,Elacatinus lori,46,20,0.67,6,179,1074,nd,nd,nd,nd
+2015/04/09,Boston University Lab,Elacatinus lori,46,20,0.67,8,136,1088,nd,nd,nd,nd
+2015/04/09,Boston University Lab,Elacatinus lori,46,20,0.67,10,90,900,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,2,85,170,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,2,53,106,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,2,598,1196,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,4,26,104,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,4,103,412,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,4,42,168,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,6,26,156,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,6,74,444,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,6,95,570,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,8,6,48,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,8,33,264,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,8,26,208,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,10,19,190,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,10,20,200,nd,nd,nd,nd
+2015/05/16,Field in Belize,Elacatinus lori,1,0,0,10,21,210,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,2,34,68,3.77,3.57,1.33,0.72
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,2,48,96,3.67,3.5,1.29,0.71
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,2,95,190,3.32,3.19,1.07,0.69
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,4,56,224,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,4,36,144,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,4,66,264,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,6,26,156,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,6,34,204,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,6,28,168,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,8,18,144,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,8,16,128,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,8,28,224,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,10,22,220,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,10,21,210,nd,nd,nd,nd
+2015/05/19,Field in Belize,Elacatinus colini,21,0,0,10,14,140,nd,nd,nd,nd
+2015/05/20,Field in Belize,Elacatinus lori,2,0,0,2,288,576,nd,nd,nd,nd
+2015/05/20,Field in Belize,Elacatinus lori,2,0,0,4,88,352,nd,nd,nd,nd
+2015/05/20,Field in Belize,Elacatinus lori,2,0,0,6,48,288,nd,nd,nd,nd
+2015/05/20,Field in Belize,Elacatinus lori,2,0,0,8,43,344,nd,nd,nd,nd
+2015/05/20,Field in Belize,Elacatinus lori,2,0,0,10,25,250,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,2,257,514,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,2,28,56,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,2,36,72,3.6,3.47,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,4,25,100,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,4,36,144,3.52,3.29,0.45,0.87
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,4,57,228,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,6,10,60,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,6,20,120,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,6,24,144,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,8,21,168,3.11,3.01,0.54,0.79
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,8,24,192,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,8,28,224,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,10,22,220,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,10,28,280,nd,nd,nd,nd
+2015/05/21,Field in Belize,Elacatinus lori,3,0,0,10,14,140,3.82,3.63,0.47,0.87
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,2,36,72,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,2,23,46,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,2,36,72,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,4,24,96,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,4,57,228,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,4,29,116,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,6,27,162,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,6,42,252,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,6,33,198,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,8,36,288,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,8,22,176,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,8,19,152,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,10,21,210,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,10,8,80,nd,nd,nd,nd
+2015/05/22,Field in Belize,Elacatinus lori,4,0,0,10,9,90,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,2,269,538,3.01,2.86,0.46,0.69
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,2,385,770,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,2,77,154,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,4,22,88,3.11,2.93,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,4,55,220,3.48,3.24,0.45,1.06
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,4,110,440,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,6,33,198,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,6,14,84,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,8,13,104,3.12,2.93,0.41,0.87
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,8,14,112,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,10,11,110,nd,nd,nd,nd
+2015/05/23,Field in Belize,Elacatinus lori,5,0,0,10,15,150,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,2,112,224,3.22,3.08,0.41,0.76
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,2,100,200,3.34,3.14,0.46,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,2,136,272,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,4,61,244,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,4,5,20,3.08,2.91,0.46,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,4,30,120,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,6,16,96,3,2.83,0.37,0.62
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,6,12,72,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,6,23,138,3.68,3.52,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,8,33,264,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,8,6,48,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,8,22,176,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,10,21,210,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,10,14,140,nd,nd,nd,nd
+2015/05/24,Field in Belize,Elacatinus lori,6,0,0,10,9,90,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,2,665,1330,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,2,582,1164,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,2,180,360,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,4,96,384,3.63,3.39,0.51,1.08
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,4,328,1312,4.54,4.34,0.58,1.38
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,4,164,656,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,6,68,408,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,6,31,186,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,6,32,192,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,8,71,568,4.52,4.23,0.6,1.58
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,8,42,336,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,8,29,232,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,10,10,100,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,10,38,380,3.97,3.79,0.49,1.25
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,10,22,220,nd,nd,nd,nd
+2015/05/26,Field in Belize,Elacatinus lori,1,10,0.33,nd,nd,nd,4.2,3.96,0.61,1.38
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,2,14,28,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,2,246,492,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,2,98,196,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,4,31,124,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,4,16,64,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,4,16,64,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,6,17,102,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,6,14,84,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,6,10,60,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,8,2,16,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,8,9,72,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,8,13,104,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,10,20,200,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,10,15,150,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,10,10,100,nd,nd,nd,nd
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,nd,nd,nd,3.6,3.41,0.5,1.02
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,nd,nd,nd,3.42,3.23,0.53,0.92
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,nd,nd,nd,3.36,3.23,0.47,0.91
+2015/05/27,Field in Belize,Elacatinus colini,23,0,0,nd,nd,nd,3.62,3.46,0.46,1.06
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,2,161,322,5.25,4.81,0.68,2.21
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,2,229,458,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,2,414,828,4.94,4.69,0.55,1.8
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,4,166,664,5.58,5.05,0.7,2.48
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,4,129,516,5.15,4.91,0.63,1.89
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,4,166,664,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,6,62,372,5.62,5.09,0.68,2.24
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,6,39,234,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,6,52,312,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,8,58,464,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,8,52,416,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,8,49,392,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,10,22,220,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,10,26,260,nd,nd,nd,nd
+2015/05/29,Field in Belize,Elacatinus colini,21,10,0.33,10,32,320,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,2,468,936,5.33,4.97,0.71,2.14
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,2,278,556,5.28,4.84,0.72,2.24
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,2,934,1868,5.02,4.76,0.66,1.95
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,4,290,1160,4.68,4.5,0.64,1.76
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,4,699,2796,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,4,710,2840,4.76,4.38,0.65,1.78
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,6,178,1068,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,6,15,90,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,6,77,462,5.44,4.92,0.71,2.09
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,8,67,536,4.5,4.23,0.61,1.67
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,8,38,304,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,8,17,136,5.3,4.88,0.74,2.27
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,10,32,320,4.94,4.75,0.64,2
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,10,29,290,nd,nd,nd,nd
+2015/06/01,Field in Belize,Elacatinus colini,22,10,0.33,10,73,730,5.03,4.76,0.67,1.99
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,2,425,850,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,2,48,96,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,2,178,356,3.74,3.51,0.41,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,4,27,108,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,4,39,156,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,4,13,52,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,6,27,162,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,6,19,114,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,6,27,162,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,8,16,128,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,8,19,152,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,8,17,136,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,10,29,290,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,10,9,90,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,10,17,170,nd,nd,nd,nd
+2015/06/04,Field in Belize,Elacatinus colini,24,0,0,nd,nd,nd,3.53,3.35,0.47,1.06
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,2,308,616,3.23,3.09,0.51,0.88
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,2,108,216,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,2,117,234,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,4,22,88,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,4,77,308,3.66,3.44,0.46,1.1
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,4,37,148,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,6,14,84,3.54,3.34,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,6,24,144,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,6,32,192,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,8,13,104,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,8,11,88,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,8,13,104,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,10,10,100,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,10,5,50,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,10,13,130,3.49,3.25,0.53,1.07
+2015/06/05,Field in Belize,Elacatinus colini,25,0,0,nd,nd,nd,3.47,3.29,0.41,1.04
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,2,580,1160,4.66,4.24,0.58,1.49
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,2,70,140,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,2,2337,4674,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,4,130,520,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,4,39,156,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,6,38,228,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,6,43,258,4.38,4,0.75,1.82
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,8,7,56,4.71,4.34,0.56,1.68
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,8,44,352,5.08,4.61,0.59,1.45
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,10,11,110,nd,nd,nd,nd
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,10,14,140,5.33,4.87,0.62,2.15
+2015/06/05,Field in Belize,Elacatinus lori,7,10,0.33,nd,nd,nd,4.58,4.2,0.63,1.82
+2015/06/06,Field in Belize,Elacatinus lori,8,10,0.33,4,66,264,4.93,4.52,0.58,1.64
+2015/06/06,Field in Belize,Elacatinus lori,8,10,0.33,6,57,342,4.43,4.12,0.61,1.47
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,2,46,92,3.71,3.56,0.46,1.18
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,2,166,332,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,2,33,66,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,4,50,200,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,4,52,208,3.55,3.42,0.46,1.13
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,4,74,296,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,6,45,270,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,6,6,36,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,6,22,132,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,8,16,128,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,8,8,64,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,8,13,104,3.72,3.53,0.49,1.17
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,10,5,50,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,10,22,220,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,10,18,180,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,nd,nd,nd,3.54,3.35,0.45,1.09
+2015/06/07,Field in Belize,Elacatinus colini,26,0,0,nd,nd,nd,3.63,3.42,0.48,1.15
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,2,1256,2512,6.41,5.71,0.83,3.49
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,2,1414,2828,6.37,5.71,0.82,3.39
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,2,511,1022,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,4,132,528,5.86,5.2,0.84,2.72
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,4,992,3968,6.8,6.05,0.79,3.25
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,4,177,708,6.3,5.56,0.79,3.29
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,6,106,636,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,6,83,498,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,6,114,684,6.5,5.83,0.84,3.64
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,8,69,552,6.22,5.57,0.8,3.21
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,8,38,304,6.17,5.5,0.82,3.43
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,8,24,192,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,10,109,1090,5.82,5.36,0.73,2.68
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,10,48,480,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus colini,27,10,0.33,10,17,170,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,2,103,206,3.74,3.57,0.48,1.17
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,2,87,174,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,2,227,454,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,4,47,188,3.99,3.78,0.48,1.16
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,4,413,1652,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,4,155,620,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,6,53,318,3.79,3.5,0.56,1.15
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,6,27,162,nd,3.55,0.55,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,6,38,228,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,8,22,176,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,8,22,176,4.35,4.05,0.63,1.61
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,8,24,192,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,10,11,110,nd,nd,nd,nd
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,10,13,130,4.27,3.93,0.56,1.4
+2015/06/07,Field in Belize,Elacatinus lori,9,10,0.33,10,9,90,4.98,4.57,0.66,2.01
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,2,1365,2730,7.69,6.87,1.02,4.82
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,2,2518,5036,7.96,6.96,1.06,4.96
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,2,762,1524,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,4,226,904,6.22,5.56,0.73,2.68
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,4,290,1160,7.91,7.02,1.02,5.39
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,4,166,664,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,6,79,474,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,6,108,648,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,6,394,2364,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,8,178,1424,8.04,7.12,1.05,5.21
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,8,64,512,7.83,6.91,0.99,4.97
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,8,71,568,7.39,6.57,0.96,4.42
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,10,214,2140,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,10,40,400,nd,nd,nd,nd
+2015/06/08,Field in Belize,Elacatinus colini,21,20,0.67,10,28,280,8.56,7.5,1.15,4.51
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,2,1792,3584,6.45,5.91,0.86,3.1
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,2,572,1144,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,2,2347,4694,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,4,1535,6140,6.87,6.27,0.91,3.56
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,4,1399,5596,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,4,1021,4084,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,6,131,786,7.04,6.37,0.9,3.92
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,6,590,3540,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,6,666,3996,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,8,60,480,6.12,5.59,0.85,2.84
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,8,102,816,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,8,79,632,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,10,49,490,6.95,6.22,0.89,3.73
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,10,19,190,nd,nd,nd,nd
+2015/06/11,Field in Belize,Elacatinus colini,22,20,0.67,10,21,210,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,2,565,1130,9.52,8.34,1.35,8
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,2,13962,27924,9.62,8.35,1.41,8.56
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,2,1057,2114,10.88,9.43,1.54,10.34
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,4,1314,5256,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,4,538,2152,10.5,9.17,1.61,10.78
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,4,304,1216,10.37,8.92,1.5,9.4
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,6,1401,8406,9.1,8.03,1.26,7.3
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,6,327,1962,9.9,8.68,1.56,9.86
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,6,986,5916,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,8,519,4152,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,8,1432,11456,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,8,1680,13440,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,10,237,2370,9.61,8.45,1.36,7.92
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,10,319,3190,nd,nd,nd,nd
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,10,230,2300,10.31,8.89,1.55,9.86
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,nd,nd,nd,9.69,8.47,1.45,8.56
+2015/06/18,Field in Belize,Elacatinus colini,21,30,1,nd,nd,nd,10.28,9.02,1.54,9.36
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,2,1089,2178,9.04,7.99,1.34,6.5
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,2,429,858,nd,nd,nd,nd
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,2,3307,6614,9.63,8.49,1.45,7.8
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,4,1960,7840,nd,nd,nd,nd
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,4,1286,5144,nd,nd,nd,nd
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,4,1785,7140,nd,nd,nd,nd
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,6,777,4662,9.63,8.49,1.45,7.8
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,6,306,1836,10.83,9.36,1.55,10.4
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,6,667,4002,10.26,8.93,1.58,10.2
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,8,2519,20152,nd,nd,nd,nd
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,8,275,2200,10.09,8.82,1.52,9.42
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,8,148,1184,8.64,7.57,1.19,6.19
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,10,178,1780,10.86,9.38,1.5,9.14
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,10,212,2120,10.78,9.4,1.61,9.88
+2015/06/21,Field in Belize,Elacatinus colini,22,30,1,10,162,1620,10.2,8.86,1.44,9.39
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,2,1451,2902,5.97,5.41,0.84,2.97
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,2,308,616,5.42,4.93,0.72,2.45
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,4,109,436,nd,nd,nd,nd
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,4,242,968,nd,nd,nd,nd
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,6,227,1362,6.8,6.03,0.93,3.79
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,6,59,354,5.82,5.18,0.78,2.95
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,8,76,608,nd,nd,nd,nd
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,8,43,344,5.85,5.27,0.76,2.75
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,10,18,180,5.7,5.11,0.75,2.74
+2015/06/26,Field in Belize,Elacatinus lori,11,10,0.33,10,13,130,nd,nd,nd,nd
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,2,666,1332,8.01,7,1.1,5.39
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,2,402,804,6.05,5.4,0.78,2.72
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,4,268,1072,6.95,6.13,0.98,4.03
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,6,288,1728,7.15,6.3,0.97,3.85
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,8,116,928,nd,nd,nd,nd
+2015/07/02,Field in Belize,Elacatinus lori,10,20,0.67,10,16,160,nd,nd,nd,nd
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,2,2314,4628,7.24,6.33,0.93,3.67
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,4,664,2656,7.36,6.45,0.96,3.96
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,4,173,692,nd,nd,nd,nd
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,6,69,414,nd,nd,nd,nd
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,8,47,376,6.29,5.59,0.95,3.25
+2015/07/07,Field in Belize,Elacatinus lori,12,20,0.67,10,38,380,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,2,2884,5768,6.19,5.88,0.8,2.8
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,2,189,378,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,2,603,1206,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,4,716,2864,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,4,126,504,6.46,5.86,0.83,3.44
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,4,661,2644,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,6,237,1422,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,6,87,522,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,6,78,468,6.33,5.77,0.79,3.3
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,8,25,200,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,8,65,520,6.39,5.78,0.74,2.78
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,8,18,144,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,10,14,140,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,10,21,210,nd,nd,nd,nd
+2015/07/08,Field in Belize,Elacatinus colini,28,10,0.33,10,19,190,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,468,936,11.33,9.6,1.77,12.39
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,3220,6440,10.72,9.07,1.51,7.73
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,2095,4190,11.07,9.92,1.76,11.31
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,453,906,11.35,9.61,1.66,10.22
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,365,730,11.58,9.86,1.71,11.95
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,2,769,1538,11.03,9.37,1.69,10.89
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,2351,9404,9.76,8.54,1.41,7.52
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,4278,17112,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,4576,18304,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,598,2392,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,650,2600,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,4,118,472,9.66,8.34,1.39,7.89
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,836,5016,8.71,7.47,1.22,5.59
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,607,3642,8.91,7.56,1.25,5.71
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,165,990,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,146,876,8.52,7.41,1.28,1.28
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,142,852,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,6,87,522,10.99,9.49,1.76,12.8
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,287,2296,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,1229,9832,10.23,8.78,1.51,8.85
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,109,872,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,72,576,9.51,8.21,1.37,6.18
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,110,880,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,8,81,648,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,418,4180,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,249,2490,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,927,9270,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,38,380,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,106,1060,nd,nd,nd,nd
+2015/07/12,Field in Belize,Elacatinus lori,10,30,1,10,99,990,9.42,8.11,1.32,7.48
+2015/07/13,Field in Belize,Elacatinus lori,14,10,0.33,6,62,372,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,14,10,0.33,8,46,368,5.29,4.89,0.7,1.85
+2015/07/13,Field in Belize,Elacatinus lori,14,10,0.33,10,23,230,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,2,16334,32668,10.23,8.74,1.53,9.25
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,2,1009,2018,11.54,9.85,1.82,13.02
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,2,2821,5642,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,4,288,1152,9.89,8.45,1.48,8.39
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,4,786,3144,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,4,185,740,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,6,517,3102,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,6,280,1680,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,6,213,1278,10.97,9.34,1.74,11.74
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,8,108,864,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,8,182,1456,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,8,115,920,11.15,9.53,1.82,11.43
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,10,78,780,11.41,9.83,1.89,11.81
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,10,146,1460,nd,nd,nd,nd
+2015/07/13,Field in Belize,Elacatinus lori,10,30,1,10,48,480,9.44,8.22,1.39,8.36
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,2,681,1362,5.66,5.1,0.74,2.56
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,2,1577,3154,5.64,5.16,0.71,2.5
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,2,737,1474,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,4,204,816,5.55,5.04,0.73,2.47
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,4,581,2324,5.64,5.1,0.69,2.54
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,4,276,1104,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,6,142,852,6.2,5.61,0.76,2.92
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,6,178,1068,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,6,51,306,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,8,47,376,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,8,112,896,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,8,29,232,6.3,5.71,0.8,3.16
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,10,28,280,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,10,26,260,nd,nd,nd,nd
+2015/07/15,Field in Belize,Elacatinus colini,29,10,0.33,10,16,160,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,2,996,1992,8.99,7.77,1.2,6.55
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,2,636,1272,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,2,971,1942,9.26,8.12,1.24,6.57
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,4,500,2000,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,4,393,1572,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,4,1243,4972,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,6,849,5094,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,6,740,4440,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,6,276,1656,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,8,156,1248,9.71,8.51,1.27,6.43
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,8,104,832,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,8,129,1032,8.78,7.82,1.17,6.48
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,10,221,2210,nd,nd,nd,nd
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,10,325,3250,9.72,8.57,1.32,7.08
+2015/07/19,Field in Belize,Elacatinus colini,28,20,0.67,10,49,490,nd,nd,nd,nd
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,2,1263,2526,5.83,5.32,0.76,2.47
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,2,1472,2944,nd,nd,nd,nd
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,6,225,1350,nd,nd,nd,nd
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,8,52,416,7.45,6.55,0.99,4.57
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,8,76,608,8.67,7.54,1.16,6.09
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,10,32,320,nd,nd,nd,nd
+2015/07/21,Field in Belize,Elacatinus lori,15,20,0.67,10,38,380,6.38,5.69,0.87,3.06
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,606,1212,7.14,6.34,0.9,3.91
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,745,1490,7.99,7,1,5.58
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,618,1236,7.25,6.33,0.95,4.1
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,231,462,7.86,6.98,1.06,5.15
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,297,594,7.84,6.81,1.04,4.83
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,2,701,1402,8.71,7.65,1.17,7.04
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,215,860,5.8,5.24,0.72,2.67
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,517,2068,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,667,2668,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,477,1908,8.18,7.16,1.08,5.6
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,181,724,8.31,7.33,1.06,5.84
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,4,304,1216,8.76,7.65,1.17,6.55
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,215,1290,8.23,7.32,1.02,5.8
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,316,1896,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,687,4122,9.16,7.88,1.26,7.26
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,745,4470,7.55,6.64,0.89,4.27
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,109,654,8.76,7.99,1.25,6.54
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,6,338,2028,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,92,736,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,63,504,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,116,928,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,129,1032,8.12,7.17,1.04,5.09
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,138,1104,7.56,6.69,0.91,4.6
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,8,152,1216,7.37,6.55,0.92,4.58
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,37,370,8.15,7.14,1.05,5.33
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,77,770,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,168,1680,7.6,6.76,0.95,4.39
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,176,1760,8.09,7.1,1.08,5.51
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,13,130,nd,nd,nd,nd
+2015/07/25,Field in Belize,Elacatinus colini,29,20,0.67,10,42,420,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,2,337,674,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,2,165,330,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,2,727,1454,10.17,8.82,1.55,8.44
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,4,596,2384,10.86,9.41,1.66,10.13
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,4,668,2672,9.36,8.04,1.34,7.42
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,4,1156,4624,10.1,8.77,1.48,9.71
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,6,140,840,10.5,9.13,1.69,1.69
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,6,320,1920,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,6,204,1224,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,8,162,1296,9,7.79,1.32,6.67
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,8,1015,8120,9.87,8.53,1.46,8.77
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,8,215,1720,10.91,9.35,1.7,11.22
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,10,60,600,nd,nd,nd,nd
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,10,209,2090,7.91,9.05,1.3,7.15
+2015/07/27,Field in Belize,Elacatinus colini,27,30,1,10,137,1370,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,2,342,684,11.31,9.85,1.69,11.4
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,2,187,374,11.83,10.34,1.91,12.8
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,2,244,488,11.17,9.56,1.55,9.36
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,4,399,1596,11.08,9.62,1.7,11.63
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,4,269,1076,11.93,10.71,1.68,11.19
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,4,668,2672,11.4,9.8,1.66,11.09
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,6,1070,6420,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,6,388,2328,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,6,602,3612,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,8,549,4392,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,8,688,5504,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,8,792,6336,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,10,256,2560,nd,nd,nd,nd
+2015/07/29,Field in Belize,Elacatinus colini,28,30,1,10,287,2870,nd,nd,nd,nd
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,2,322,644,10.52,9.16,1.47,9.96
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,2,538,1076,8.62,7.58,1.1,5.74
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,2,573,1146,11.11,9.69,1.6,10.87
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,4,421,1684,10.48,9.23,1.47,9.51
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,4,840,3360,11.11,9.76,1.61,11.06
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,4,186,744,8.86,7.78,1.15,5.87
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,6,425,2550,10.12,8.67,1.41,8.76
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,6,3306,19836,9.75,8.53,1.35,8.28
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,6,958,5748,8.84,7.73,1.19,6.52
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,8,320,2560,9.92,8.61,1.42,7.72
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,8,192,1536,10.85,9.55,1.65,10.07
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,8,293,2344,8.29,7.39,1.16,5.36
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,10,979,9790,9.9,8.54,1.34,8.87
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,10,187,1870,10.42,8.95,1.5,8.65
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,10,293,2930,9.4,8.04,1.39,7.26
+2015/08/04,Field in Belize,Elacatinus colini,29,30,1,10,351,3510,nd,nd,nd,nd
+2015/08/07,Field in Belize,Elacatinus lori,400,20,0.67,6,486,2916,nd,nd,nd,nd
+2015/08/07,Field in Belize,Elacatinus lori,400,20,0.67,6,370,2220,nd,nd,nd,nd
+2015/08/10,Field in Belize,Elacatinus lori,16,20,0.67,2,939,1878,nd,nd,nd,nd
+2015/08/10,Field in Belize,Elacatinus lori,16,20,0.67,4,974,3896,5.91,5.26,0.82,2.59
+2015/08/10,Field in Belize,Elacatinus lori,16,20,0.67,6,420,2520,6.77,6.02,0.91,3.35
+2015/08/10,Field in Belize,Elacatinus lori,16,20,0.67,8,55,440,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,2,802,1604,4.9,4.5,0.65,2.03
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,2,310,620,5.85,5.29,0.79,2.75
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,2,719,1438,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,2,1214,2428,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,4,390,1560,4.96,4.63,0.72,2.13
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,4,625,2500,5.45,5.09,0.77,2.44
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,4,246,984,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,4,297,1188,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,6,40,240,5.67,5.24,0.79,2.75
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,6,94,564,4.86,4.56,0.65,1.94
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,6,37,222,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,8,22,176,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,8,42,336,5.48,5.08,0.8,2.76
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,8,46,368,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,8,13,104,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,10,8,80,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,10,10,100,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,10,12,120,nd,nd,nd,nd
+2015/08/16,Field in Belize,Elacatinus lori,17,10,0.33,10,24,240,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,6,20640,123840,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,6,892620,5355720,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,8,7980,63840,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,8,34920,279360,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,8,696900,5575200,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,10,24360,243600,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,10,35700,357000,nd,nd,nd,nd
+2015/11/11,Boston University Lab,Amphiprion percula,B 2:2,8,1,10,104100,1041000,nd,nd,nd,nd
