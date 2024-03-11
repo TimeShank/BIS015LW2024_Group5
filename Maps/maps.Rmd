@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#Load the Libraries 
+# Load the Libraries 
 ```{r}
 library(tidyverse)
 library(janitor)
@@ -29,7 +29,7 @@ Load the data for longitude and latitude of clownfish and blue tang
 long_lat <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
 ```
 
-#Scatterplot of the longitude and latitude of clownfish and blue tang
+# Scatterplot of the longitude and latitude of clownfish and blue tang
 ```{r}
 #Make a scatterplot of the clownfish and blue tang
 long_lat %>%
@@ -47,7 +47,7 @@ Load a map from `stamen` in a terrain style projection and display the map.
 register_stadiamaps("ae9b303b-2453-44b9-8f34-55a7a872cf5c", write = FALSE)
 ```
 
-#Map the longitude and latitude of Amphiprion percula in Australia
+# Map the longitude and latitude of Amphiprion percula in Australia
 ```{r}
 library(ggplot2)
 library(ggmap)
@@ -71,7 +71,7 @@ ggmap(map_australia) +
   theme(legend.position = "none")
 ```
 
-#Map the longitude and latitude of Paracanthurus hepatus
+# Map the longitude and latitude of Paracanthurus hepatus
 ```{r}
 library(ggplot2)
 library(ggmap)
@@ -96,7 +96,7 @@ ggmap(map_paracanthurus) +
   theme(legend.position = "none")
 ```
 
-#Map that plots both species longitude and latitude and color codes them
+# Map that plots both species longitude and latitude and color codes them
 ```{r}
 library(ggplot2)
 library(ggmap)
