@@ -115,6 +115,7 @@ Survival with jellyfish?
 How likely are these fish to survive an angler fish?
 How likely are these fish to survive an encounter with sharks?
 Does gender or age play a role in swimming speed or endurance?
+Do the fish need to rest?
 
 ## Sources
 

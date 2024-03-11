@@ -2,7 +2,9 @@
 title: "Fish Data Stella"
 author: "Stella"
 date: "2024-02-22"
-output: html_document
+output: 
+  html_document: 
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -12,4 +14,184 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 getwd()
 ```
+
+```{r}
+library(shiny)
+library(ggplot2)
+library(ggthemes)
+
+# Assuming you have the 'clownfish_endurance' data loaded
+
+ui <- fluidPage(
+  titlePanel("Clownfish Speed Distribution"),
+  plotOutput("plot")
+)
+
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    clownfish_endurance %>%
+      ggplot(aes(speed)) +
+      geom_histogram(bins = 5, color = "black", fill = "orange", alpha = 0.8) +
+      labs(title = "Speed of Clownfish", x = "Speed (cm/sec)", y = "Frequency") +
+      theme_economist() +
+      theme(plot.title = element_text(hjust = 0.5))
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+
+```
+
+```{r}
+library(shiny)
+library(ggplot2)
+
+# Assuming you have the 'clownfish_endurance' data loaded
+
+ui <- fluidPage(
+  titlePanel("Clownfish Density for Total Length"),
+  plotOutput("plot")
+)
+
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    clownfish_endurance %>%
+      filter(!is.na(dist_cm)) %>%
+      ggplot(aes(dist_cm)) +
+      geom_density(color = "black", fill = "purple3")
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+
+```
+
+```{r}
+ui <- fluidPage(
+  titlePanel("Clownfish Distance vs. Time"),
+  plotOutput("plot")
+)
+
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  ggplot(aes(x= log10(dist_cm), y=log10(time_sec), color = speed)) +
+  geom_point() +
+  theme_economist() + 
+  labs(title = "Clownfish Endurance", x = "log10 Distance (cm)", y = "log10 Time (sec)", color = "Speed (cm/sec)") + 
+  theme(legend.position = "right") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+```
+
+```{r}
+ui <- fluidPage(
+  titlePanel("Total Length of Clownfish"),
+  plotOutput("plot")
+)
+
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    clownfish_endurance %>%
+    filter(tl != "NA") %>%
+  ggplot(aes(tl)) + 
+  geom_density(fill= "orange", alpha = 0.7) + 
+  theme_economist() + 
+  labs(title = "Total Length of Clownfish", x = "Total Length (cm)", y = "Density") 
+    
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+```
+
+
+
+
+
+
+______________________________________________________________________________-
+
+# Irrelevant work
+
+```{r}
+ui <- fluidPage(
+  radioButtons("x", "Speed of Clownfish", choices = unique(clownfish_endurance$speed), selected = "2"),
+  plotOutput("plot")
+)
+
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    clownfish_endurance %>%
+      ggplot(aes_string(x = input$x)) +
+      geom_histogram(position="dodge",bins = 5, color = "black", fill = "orange", alpha = 0.8) +
+      labs(title = "Speed of Clownfish", x = "Speed (cm/sec)", y = "Frequency") +
+      theme_economist() +
+      theme(plot.title = element_text(hjust = 0.5))
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+```
+
+```{r}
+ui <- fluidPage(
+  titlePanel("Clownfish Speed Distribution"),
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("speed_slider", "Adjust Speed:", 
+                  min = min(clownfish_endurance$speed, na.rm = TRUE),
+                  max = max(clownfish_endurance$speed, na.rm = TRUE),
+                  value = mean(clownfish_endurance$speed, na.rm = TRUE))
+    ),
+    mainPanel(
+      plotOutput("plot")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  filtered_data <- reactive({
+    clownfish_endurance %>%
+      filter(!is.na(speed),
+             speed >= input$speed_slider - 1 & speed <= input$speed_slider + 1)
+  })
+
+  output$plot <- renderPlot({
+    ggplot(filtered_data(), aes(speed)) +
+      geom_histogram(bins = 5, color = "black", fill = "orange", alpha = 0.8) +
+      labs(title = "Speed of Clownfish", x = "Speed (cm/sec)", y = "Frequency") +
+      theme_economist() +
+      theme(plot.title = element_text(hjust = 0.5))
+  })
+
+  observe({
+    updateSliderInput(session, "speed_slider", 
+                      value = input$speed_slider, 
+                      min = min(clownfish_endurance$speed, na.rm = TRUE), 
+                      max = max(clownfish_endurance$speed, na.rm = TRUE))
+  })
+
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui, server)
+
+```
+
 
