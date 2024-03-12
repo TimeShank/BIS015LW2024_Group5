@@ -24,16 +24,16 @@ install.packages("imager")
 ```{r}
 #install.packages("luberdate")
 
-#library(here)
+library(here)
 #library(shinydashboard)
-#library(shiny)
+library(shiny)
 #library(luberdate)
 library("tidyverse")
-#library("janitor")
-#library(RColorBrewer)
+library("janitor")
+library(RColorBrewer)
 #library(paletteer)
 #library(ggmap)
-library(imager)
+#library(imager)
 ```
 
 ### How to present ###
@@ -135,67 +135,33 @@ Do the fish need to rest?
 *Blue whale swim speed* (https://www.fisheries.noaa.gov/species/blue-whale)
 
 
-## Data frames
-
 
 ## Code
 
-```{r}
-lat_aus <- c(-40.00, -15.00)
-long_aus <- c(147.20, 160.30)
-bbox_aus <- make_bbox(long_aus, lat_aus, f = 0.03) #f is the fraction of the bounding box to add to the range. Makes the map this much bigger
-```
-
-*Register key*
-```{r}
-register_stadiamaps("f708f72b-d437-4865-ae4b-24b90ace44ec", write = FALSE)
-```
-
-*Get base map*
-```{r}
-map_aus <- get_stadiamap(bbox_aus, maptype = "stamen_terrain", zoom=5)
-```
-
-*Display base map*
-```{r}
-ggmap(map_aus)
-```
-
-```{r}
-aus_current <- load.image("C:/Users/Johnn/Desktop/BIS_015L_Project/data/nemocurrent.jpg")
-```
-
+*load endurance data*
 ```{r}
 endurance <- read_csv("data/endurance_of_clownfish.csv")
 ```
 
+*chance names to data*
 ```{r}
 endurance <- data.frame(date=endurance$date, species=endurance$species, batch_id=endurance$batch_id, days_post_hatch=endurance$dph,percent_settlment_age=endurance$stand_dph, speed_in_cm_sec=endurance$speed, swim_duration_in_secconds=endurance$time_sec, dist_swam_in_cm=endurance$dist_cm, total_length=endurance$tl, standard_length=endurance$sl, body_depth=endurance$bd, propulsive_area=endurance$pa)
 ```
 
 
-```{r}
-endurance %>% 
-  select(speed,swim_duration_in_secconds,dist_swam_in_cm)
-```
-
-Does longer swim durration mean greater distance?
-Does faster speed mean greater distance?
-Does length, age, or body depth affect distance?
-
 
 Speed x distance = time
 
+Let's look at:
+
 no current
-
 with current
-
 with current and whale
 
-summarize avg fish speed and best fish speed - when do they get to sydney
+summarize avg fish speed and best fish speed - when do they get to sydney?
 
 
-    ## Clownfish data into kilometers and hours
+## Clownfish endurance data into kilometers and hours
 ```{r}
 endurance <- endurance %>%
   filter(dist_swam_in_cm != "NA") %>%
@@ -217,23 +183,26 @@ endurance <- endurance %>%
 ```{r}
 mean(endurance$speed_in_km_hr)
 ```
+
 ```{r}
 max(endurance$speed_in_km_hr)
 ```
+
 ```{r}
-avg_journey_time <-  1,816.052km / 0.21888km_hr = 8,297.02 hrs / 24 = 346 days
+#avg_journey_time <-  1,816.052km / 0.21888km_hr = 8,297.02 hrs / 24 = 346 days
 
-avg_journey_time_current 1,816.052 / (0.21888 + 7)  = 251.57 hrs /24 = 10.5 days
+#avg_journey_time_current 1,816.052 / (0.21888 + 7)  = 251.57 hrs /24 = 10.5 days
 
-avg_journey_time_current_whale ( 1,353.05 / (0.21888 + 7) ) + ( 463 / (0.21888 + 32.19) ) = 187.43 + 14.29 = 201.72 hrs /24 = 8.4 days
+#avg_journey_time_current_whale ( 1,353.05 / (0.21888 + 7) ) + ( 463 / (0.21888 + 32.19) ) = 187.43 + 14.29 = 201.72 hrs /24 = 8.4 days
 
-max_journey_time  1,816.052 / 0.360 = 5,044.58 hrs / 24 = 210 days
+#max_journey_time  1,816.052 / 0.360 = 5,044.58 hrs / 24 = 210 days
 
-max_journey_time_current  1,816.052 / (0.360 + 7) = 246.75 hrs /24 = 10.3 days
+#max_journey_time_current  1,816.052 / (0.360 + 7) = 246.75 hrs /24 = 10.3 days
 
-max_journey_time_current_whale ((0.360 + 7) x 1,353.05) + ((0.360 + 32.19) x 463) = 183.84 + 14.22 = 198.06 hrs /24 = 8.3 days
+#max_journey_time_current_whale ((0.360 + 7) x 1,353.05) + ( 463 / (0.360 + 32.19)) = 183.84 + 14.22 = 198.06 hrs /24 = 8.3 days
 ```
 
+*take data of journey time and add it to vectors*
 ```{r}
 avg_journey_time <- c(346,10.5,8.4)
 
@@ -243,11 +212,11 @@ journey <- c("days_self", "days_with_current", "days_with_current_whale")
 ```
 
 
-
+*make data into data frame*
 ```{r}
 journey <- data.frame(journey,avg_journey_time,min_journey_time)
 ```
-view(journey)
+
 ```{r}
 view(journey)
 ```
@@ -255,25 +224,13 @@ view(journey)
 
 
 
-They swim 1,816,053.83 meters = 1,816.052 kilometers
+They swim 1,816,053.83 meters = 1,816.052 kilometers from the great barrier to sydney
 
 The current is 250 nautical miles (463 km) from the shore. This will be the distance the whale takes them.
 
 Blue whale can travel up to 32.19 km/hr
 
 
-
-```{r}
-clownfish_endurance_2 %>% 
-  select(dist_km, time_hr) %>%
-  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
-  mutate(days_to_sydney = (2922655.33 / speed_with_current) / 24)  %>%
-  ggplot(aes(days_to_sydney)) + 
-  geom_density(fill = "orange", alpha = 0.7) +
-  theme_economist() +
-  labs(title = "Time to Sydney with Current", x = "Time (Days)", y = "Density") + 
-  theme(plot.title = element_text(hjust = 0.5))
-```
 
 
 
