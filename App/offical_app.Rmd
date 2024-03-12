@@ -77,7 +77,27 @@ bt <- long_lat %>%
   filter(species=="Paracanthurus hepatus")
 ```
 
+```{r}
+clownfish_endurance_2 <- clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  select(speed, dist_cm, time_sec) %>%
+  mutate(dist_km = dist_cm / 100000) %>%
+  mutate(time_hr = time_sec / 3600) %>%
+  arrange(-dist_km)
 
+
+clownfish_endurance_2 %>%
+  select(dist_km, time_hr) %>%
+  mutate(speed_km_hr = dist_km / time_hr) %>%
+  top_n(10, dist_km) %>%
+  arrange(-dist_km)
+
+clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  arrange(-dist_km)
+```
 
 ### Official Shiny App
 ```{r}
@@ -132,10 +152,17 @@ titlePanel("Finding Nemo: How Far Did They Go?"),
           height = 200,
           plotOutput("tlength")
         )
+        ),
+        tabPanel("Time to Sydney with Current",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("timecurrent")
+        )
+        )
       )
     )
  )
-)
 
 
 server <- function(input, output, session) {
@@ -207,7 +234,17 @@ server <- function(input, output, session) {
     
   })
 
-  
+  output$timecurrent <-renderPlot ({
+    clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  ggplot(aes(days_to_sydney)) + 
+  geom_density(fill = "orange", alpha = 0.7) +
+  theme_economist() +
+  labs(title = "Time to Sydney with the Current", x = "Time (Days)", y = "Density") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    })
 }
 
 
