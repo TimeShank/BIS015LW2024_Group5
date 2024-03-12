@@ -43,7 +43,7 @@ endurance_clownfish <- endurance %>%
                                  speed = "nd"))
 ```
  
-#### location data
+#### Location data
 ```{r}
 pointmap <- read_csv("data/fishes_pointmap.csv") %>% clean_names()
 ```
@@ -220,7 +220,7 @@ bt <- long_lat %>%
 ```
 
 
-### Official Shiny App
+### Shiny App
 ```{r}
 library(shiny)
 library(shinydashboard)
@@ -273,14 +273,21 @@ titlePanel("Finding Nemo: How Far Did They Go?"),
           height = 200,
           plotOutput("tlength")
         )
+        ),
+        tabPanel("Time to Sydney with Current",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("timecurrent")
+        )
+        )
       )
     )
  )
-)
 
 
-server <- function(input, output) {
-
+server <- function(input, output, session) {
+ session$onSessionEnded(stopApp)
   selected_scatterplot <- reactive({
    switch(input$scatterplot_choice,
            "Both Species" = ggplot(long_lat, aes(x = longitude, y = latitude, color = species)) +
@@ -348,7 +355,17 @@ server <- function(input, output) {
     
   })
 
-  
+  output$timecurrent <-renderPlot ({
+    clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  ggplot(aes(days_to_sydney)) + 
+  geom_density(fill = "orange", alpha = 0.7) +
+  theme_economist() +
+  labs(title = "Time to Sydney with the Current", x = "Time (Days)", y = "Density") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    })
 }
 
 

@@ -107,7 +107,7 @@ library(shinythemes)
 library(ggplot2)
 
 ui <- dashboardPage(skin="yellow",
-  dashboardHeader(title = "Summary App", titleWidth = 400),
+  dashboardHeader(title = "Summary", titleWidth = 400),
   dashboardSidebar(disable = TRUE),
   dashboardBody(
 titlePanel("Finding Nemo: How Far Did They Go?"),
