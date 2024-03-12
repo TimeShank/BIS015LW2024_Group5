@@ -24,13 +24,13 @@ install.packages("imager")
 ```{r}
 #install.packages("luberdate")
 
-library(here)
+#library(here)
 #library(shinydashboard)
-library(shiny)
+#library(shiny)
 #library(luberdate)
-library("tidyverse")
-library("janitor")
-library(RColorBrewer)
+#library("tidyverse")
+#library("janitor")
+#library(RColorBrewer)
 #library(paletteer)
 #library(ggmap)
 #library(imager)
@@ -174,7 +174,7 @@ endurance <- endurance %>%
 ```
 
 
-    ## Speed in kilometers/ hour
+## Speed in kilometers/ hour
 ```{r}
 endurance <- endurance %>% 
   filter(speed_in_km_hr != "NaN")
