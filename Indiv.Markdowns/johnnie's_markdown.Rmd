@@ -187,7 +187,7 @@ mean(endurance$speed_in_km_hr)
 ```{r}
 max(endurance$speed_in_km_hr)
 ```
-
+*calculations of journey time*
 ```{r}
 #avg_journey_time <-  1,816.052km / 0.21888km_hr = 8,297.02 hrs / 24 = 346 days
 
