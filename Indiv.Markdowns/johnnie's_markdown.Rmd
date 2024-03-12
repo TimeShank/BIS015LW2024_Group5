@@ -96,6 +96,7 @@ How would clownfish and blue tangs coexist?
 
 Where is the East Australian Current and how fast does it go? - 7km/hr
 - transports a staggering 30 million cubic metres of water southward each second at speeds of up to seven kilometres per hour. The current can be up to 100 kilometres wide and 1.5 kilometress deep.
+- about 250NM off the shorline
 
 Location of the EA current exit and sydney harbor?
 
@@ -163,18 +164,19 @@ ggmap(map_aus)
 ```{r}
 aus_current <- load.image("C:/Users/Johnn/Desktop/BIS_015L_Project/data/nemocurrent.jpg")
 ```
+
 ```{r}
 endurance <- read_csv("data/endurance_of_clownfish.csv")
 ```
 
 ```{r}
-endurance <- data.frame(date=endurance$date, species=endurance$species, batch_id=endurance$batch_id, days_post_hatch=endurance$dph,percent_settlment_age=endurance$stand_dph, speed=endurance$speed, swim_duration_in_secconds=endurance$time_sec, dist_swam_in_cm=endurance$dist_cm, total_length=endurance$tl, standard_length=endurance$sl, body_depth=endurance$bd, propulsive_area=endurance$pa)
+endurance <- data.frame(date=endurance$date, species=endurance$species, batch_id=endurance$batch_id, days_post_hatch=endurance$dph,percent_settlment_age=endurance$stand_dph, speed_in_cm_sec=endurance$speed, swim_duration_in_secconds=endurance$time_sec, dist_swam_in_cm=endurance$dist_cm, total_length=endurance$tl, standard_length=endurance$sl, body_depth=endurance$bd, propulsive_area=endurance$pa)
 ```
 
 
 ```{r}
 endurance %>% 
-  select(days_post_hatch,percent_settlment_age,speed,swim_duration_in_secconds,dist_swam_in_cm,total_length,standard_length,body_depth)
+  select(speed,swim_duration_in_secconds,dist_swam_in_cm)
 ```
 
 Does longer swim durration mean greater distance?
@@ -182,18 +184,93 @@ Does faster speed mean greater distance?
 Does length, age, or body depth affect distance?
 
 
+Speed x distance = time
+
+no current
+
+with current
+
+with current and whale
+
+summarize avg fish speed and best fish speed - when do they get to sydney
+
+
+    ## Clownfish data into kilometers and hours
+```{r}
+endurance <- endurance %>%
+  filter(dist_swam_in_cm != "NA") %>%
+  select(speed_in_cm_sec, dist_swam_in_cm, swim_duration_in_secconds) %>%
+  mutate(dist_swam_in_km = dist_swam_in_cm / 100000) %>%
+  mutate(swim_duration_in_hrs = swim_duration_in_secconds / 3600) %>%
+  mutate(speed_in_km_hr = dist_swam_in_km / swim_duration_in_hrs) %>% 
+  arrange(-dist_swam_in_km) %>% 
+  arrange(-speed_in_km_hr)
+```
+
+
+    ## Speed in kilometers/ hour
+```{r}
+endurance <- endurance %>% 
+  filter(speed_in_km_hr != "NaN")
+```
+
+```{r}
+mean(endurance$speed_in_km_hr)
+```
+```{r}
+max(endurance$speed_in_km_hr)
+```
+```{r}
+avg_journey_time <-  1,816.052km / 0.21888km_hr = 8,297.02 hrs / 24 = 346 days
+
+avg_journey_time_current 1,816.052 / (0.21888 + 7)  = 251.57 hrs /24 = 10.5 days
+
+avg_journey_time_current_whale ( 1,353.05 / (0.21888 + 7) ) + ( 463 / (0.21888 + 32.19) ) = 187.43 + 14.29 = 201.72 hrs /24 = 8.4 days
+
+max_journey_time  1,816.052 / 0.360 = 5,044.58 hrs / 24 = 210 days
+
+max_journey_time_current  1,816.052 / (0.360 + 7) = 246.75 hrs /24 = 10.3 days
+
+max_journey_time_current_whale ((0.360 + 7) x 1,353.05) + ((0.360 + 32.19) x 463) = 183.84 + 14.22 = 198.06 hrs /24 = 8.3 days
+```
+
+```{r}
+avg_journey_time <- c(346,10.5,8.4)
+
+min_journey_time <- c(210,10.3,8.3)
+
+journey_names <- c("journey", "self", "with_current", "with_current_whale")
+```
+
+
+
+```{r}
+journey_time <- 
+```
 
 
 
 
 
+They swim 1,816,053.83 meters = 1,816.052 kilometers
+
+The current is 250 nautical miles (463 km) from the shore. This will be the distance the whale takes them.
+
+Blue whale can travel up to 32.19 km/hr
 
 
 
-
-
-
-
+```{r}
+clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (2922655.33 / speed_with_current) / 24)  %>%
+  ggplot(aes(days_to_sydney)) + 
+  geom_density(fill = "orange", alpha = 0.7) +
+  theme_economist() +
+  labs(title = "Time to Sydney with Current", x = "Time (Days)", y = "Density") + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
 
 
