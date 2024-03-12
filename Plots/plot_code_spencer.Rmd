@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Load packages. 
     
 ```{r}
-library(tidyverse)
+library(tidyverse) 
 library(janitor)
 library(dplyr)
 library(skimr)
