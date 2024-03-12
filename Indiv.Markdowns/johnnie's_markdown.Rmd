@@ -239,15 +239,18 @@ avg_journey_time <- c(346,10.5,8.4)
 
 min_journey_time <- c(210,10.3,8.3)
 
-journey_names <- c("journey", "self", "with_current", "with_current_whale")
+journey <- c("days_self", "days_with_current", "days_with_current_whale")
 ```
 
 
 
 ```{r}
-journey_time <- 
+journey <- data.frame(journey,avg_journey_time,min_journey_time)
 ```
-
+view(journey)
+```{r}
+view(journey)
+```
 
 
 
