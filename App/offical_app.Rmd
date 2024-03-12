@@ -1,0 +1,252 @@
+---
+title: "Official App"
+author: "Maya Ziebarth"
+date: "2024-03-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Libraries 
+```{r}
+library(tidyverse)
+library(janitor)
+library(shiny)
+library(shinydashboard)
+library(ggmap)
+library(ggplot2)
+library(ggthemes)
+library(shinythemes)
+```
+
+
+### Data
+```{r}
+clownfish_endurance <- read_csv("data/endurance_of_clownfish.csv") %>% clean_names()
+long_lat <- read_csv("data/long_lat_fishes.csv") %>% clean_names()
+```
+
+### Graphs
+```{r}
+both_species <- long_lat %>% 
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+  theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+  theme_economist()+
+  theme(legend.position = "bottom")+
+  theme(plot.title = element_text(hjust = 0.5))
+both_species
+```
+
+```{r}
+clownfish <- long_lat %>% 
+  filter(species=="Amphiprion percula") %>%
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+  labs(title = "Distribution of Species") +
+   theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+  theme_economist()+
+  theme(legend.position = "bottom")+
+  theme(plot.title = element_text(hjust = 0.5))
+clownfish
+
+
+cf <- long_lat %>% 
+  filter(species=="Amphiprion percula")
+```
+
+``````{r}
+bluetang <- long_lat %>% 
+  filter(species=="Paracanthurus hepatus") %>%
+  ggplot(aes(x=longitude, y= latitude, color=species))+
+  geom_point(size = 1, alpha=0.7)+
+  scale_color_manual(values = c('Paracanthurus hepatus' = "blue")) +
+  labs(title = "Distribution of Species") +
+   theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+  theme_economist()+
+  theme(legend.position = "bottom")+
+  theme(plot.title = element_text(hjust = 0.5))
+bluetang
+
+bt <- long_lat %>% 
+  filter(species=="Paracanthurus hepatus")
+```
+
+```{r}
+clownfish_endurance_2 <- clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  select(speed, dist_cm, time_sec) %>%
+  mutate(dist_km = dist_cm / 100000) %>%
+  mutate(time_hr = time_sec / 3600) %>%
+  arrange(-dist_km)
+
+
+clownfish_endurance_2 %>%
+  select(dist_km, time_hr) %>%
+  mutate(speed_km_hr = dist_km / time_hr) %>%
+  top_n(10, dist_km) %>%
+  arrange(-dist_km)
+
+clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  arrange(-dist_km)
+```
+
+### Official Shiny App
+```{r}
+library(shiny)
+library(shinydashboard)
+library(shinythemes)
+library(ggplot2)
+
+ui <- dashboardPage(skin="yellow",
+  dashboardHeader(title = "Summary App", titleWidth = 400),
+  dashboardSidebar(disable = TRUE),
+  dashboardBody(
+titlePanel("Finding Nemo: How Far Did They Go?"),
+    tabBox( width=2000, 
+      title = "Pick Your Graph!",
+      id = "tabs",
+      tabPanel("Distrubution",
+        box(
+          title = "Options",
+          width = 1000,
+          height = 200,
+          selectInput(
+            "scatterplot_choice",
+            "Select a Distribution",
+            choices = c("Both Species", "Clown Fish", "Blue Tang"),
+            selected = "Both Species"
+              )
+            ),
+            box(
+              width = 1000,
+              height = 600,
+              plotOutput("selected_scatterplot")
+            )
+      ),
+      tabPanel("Clownfish Speed Distribution",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("speed")
+        )
+      ),
+      tabPanel("Clownfish Distance vs. Time",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("dist_time")
+ )
+      ),
+      tabPanel("Total Length of Clownfish",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("tlength")
+        )
+        ),
+        tabPanel("Time to Sydney with Current",
+        box(
+          width = 1000,
+          height = 200,
+          plotOutput("timecurrent")
+        )
+        )
+      )
+    )
+ )
+
+
+server <- function(input, output, session) {
+ session$onSessionEnded(stopApp)
+  selected_scatterplot <- reactive({
+   switch(input$scatterplot_choice,
+           "Both Species" = ggplot(long_lat, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Paracanthurus hepatus' = "blue", 'Amphiprion percula' = "orange")) +
+             labs(title = "Both Species")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme_economist()+
+            theme(legend.position = "bottom") + 
+  theme(plot.title = element_text(hjust = 0.5)),
+           "Clown Fish" = ggplot(cf, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Amphiprion percula' = "orange")) +
+             labs(title = "Clown Fish")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme_economist()+
+            theme(legend.position = "bottom") + 
+  theme(plot.title = element_text(hjust = 0.5)),
+           "Blue Tang" = ggplot(bt, aes(x = longitude, y = latitude, color = species)) +
+             geom_point(size = 3, alpha = 0.7) +
+             scale_color_manual(values = c('Paracanthurus hepatus' = "blue")) +
+             labs(title = "Blue Tang")+
+            theme(plot.title=element_text(size=rel(1.75), hjust = 0.5))+
+            theme_economist()+
+            theme(legend.position = "bottom") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    )
+  })
+
+
+  output$selected_scatterplot <- renderPlot({
+    selected_scatterplot()
+  })
+  
+    output$speed <- renderPlot({
+    clownfish_endurance %>%
+      ggplot(aes(speed)) +
+      geom_histogram(bins = 5, color = "black", fill = "orange", alpha = 0.8) +
+      labs(title = "Speed of Clownfish", x = "Speed (cm/sec)", y = "Frequency") +
+      theme_economist() +
+      theme(plot.title = element_text(hjust = 0.5))
+  })
+    
+  output$dist_time <- renderPlot({
+    clownfish_endurance %>%
+  filter(dist_cm != "NA") %>%
+  ggplot(aes(x= log10(dist_cm), y=log10(time_sec), color = speed)) +
+  geom_point() +
+  theme_economist() + 
+  labs(title = "Clownfish Endurance", x = "log10 Distance (cm)", y = "log10 Time (sec)", color = "Speed (cm/sec)") + 
+  theme(legend.position = "right") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    
+  })
+
+  output$tlength <- renderPlot({
+    clownfish_endurance %>%
+    filter(tl != "NA") %>%
+  ggplot(aes(tl)) + 
+  geom_density(fill= "orange", alpha = 0.7) + 
+  theme_economist() + 
+  labs(title = "Total Length of Clownfish", x = "Total Length (cm)", y = "Density") + 
+  theme(legend.position = "right") + 
+  theme(plot.title = element_text(hjust = 0.5)) 
+    
+  })
+
+  output$timecurrent <-renderPlot ({
+    clownfish_endurance_2 %>% 
+  select(dist_km, time_hr) %>%
+  mutate(speed_with_current = dist_km/time_hr + 7) %>% 
+  mutate(days_to_sydney = (1860 / speed_with_current) / 24)  %>%
+  ggplot(aes(days_to_sydney)) + 
+  geom_density(fill = "orange", alpha = 0.7) +
+  theme_economist() +
+  labs(title = "Time to Sydney with the Current", x = "Time (Days)", y = "Density") + 
+  theme(plot.title = element_text(hjust = 0.5))
+    })
+}
+
+
+shinyApp(ui, server)
+```
