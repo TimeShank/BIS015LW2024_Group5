@@ -11,14 +11,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Ideas
 
-## idea 1 (APPROVED BY PROF!) ; HAS A RESEARCH ARTICLE ASSOCIATED
+### idea 1 (APPROVED BY PROF!) ; HAS A RESEARCH ARTICLE ASSOCIATED
 ```{r}
-[Swimming Endurance Clown Fish](https://www.bco-dmo.org/dataset/739171) #inspired by Clownfish in Finding Nemo; not too long
+#[Swimming Endurance Clown Fish](https://www.bco-dmo.org/dataset/739171) #inspired by Clownfish in Finding Nemo; not too long
 ```
 
-## idea 2 (kinda boring ngl)
+### idea 2 (kinda boring ngl)
 ```{r}
-[Zooplankton Database](https://www.bco-dmo.org/dataset/526852) #good amount of quantitative vs. categorical data 
+#[Zooplankton Database](https://www.bco-dmo.org/dataset/526852) #good amount of quantitative vs. categorical data 
 ```
 
 
@@ -32,7 +32,8 @@ What age would get there the fastest?
  
 # Structure
 
-# Points to cover
+
+## Points to cover
 1) Location where a clown fish (Amphiprion percula) and a blue tang (Paracanthurus hepatus) coexist around Australia 
 1a) How far the location is from Sydney
 2) Clown fish distance over time
@@ -44,28 +45,38 @@ App Idea: people can look at the maps of the differnt species and they can look 
 *every person needs an assigned task*
 
 
-Liana - maps 
-#longitude and latitude of clownfish and blue tang ; use colors from both 
-#map of where they start and end
-#distance from Sydney
+### Liana - maps 
+*longitude and latitude of clownfish and blue tang ; use colors from both*
+
+*Frequency and association of Clownfish and Blue Tangs*
 
 
-Maya - app
-#work with stella and combine data for app
+### Maya - app
+*clean data*
 
-Spencer - plots
-#graphs for distance travelled of endurance data 
-#graphs for speed
-#graphs of speed versus time 
-#graph of overall fish length and size
+*work with stella and combine data for app*
+
+### Spencer - plots
+*graphs for distance travelled of endurance data* 
+
+*graphs for speed*
+
+*graphs of speed versus time* 
+
+*graph of overall fish length and size*
 
 
-Stella - app
-#work with maya and combine data for app
+### Stella - app
+*work with maya and combine data for app*
 
-Johnnie - plots
-#graph velocity of the current 
-#compare with spencers data about using the current to travel or not
+### Johnnie - plots
+*graph the current and its velovity*
+
+*Graph the distance of Marlin's journey*
+
+*compare with spencers data about using the current to travel or not*
+
+*Summarize the data to find the fastest Journey tiems*
 
 
 # Cleaned CSV files we're using
