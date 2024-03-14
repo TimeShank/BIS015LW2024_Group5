@@ -17,7 +17,7 @@ getwd()
 ### Libraries
 
 ```{r}
-install.packages("imager")
+#install.packages("imager")
 ```
 
 
@@ -28,7 +28,7 @@ install.packages("imager")
 #library(shinydashboard)
 #library(shiny)
 #library(luberdate)
-#library("tidyverse")
+library("tidyverse")
 #library("janitor")
 #library(RColorBrewer)
 #library(paletteer)
@@ -70,7 +70,7 @@ Marlin pursues the boat
 
 8) A pelican named Nigel takes them to Sherman's office
 
-## Questions to consider
+### Questions to consider
 
 Can a clounfish and a blue tang swim all the way from the great barrier reef to sydney?
 
@@ -118,7 +118,7 @@ How likely are these fish to survive an encounter with sharks?
 Does gender or age play a role in swimming speed or endurance?
 Do the fish need to rest?
 
-## Sources
+### Sources
 
 
 *Marlin's character* (https://disney.fandom.com/wiki/Marlin#:~:text=4%20Trivia-,Background,Nemo%2C%20although%20he%20means%20well)
@@ -150,7 +150,7 @@ endurance <- data.frame(date=endurance$date, species=endurance$species, batch_id
 
 
 
-Speed x distance = time
+
 
 Let's look at:
 
@@ -161,7 +161,7 @@ with current and whale
 summarize avg fish speed and best fish speed - when do they get to sydney?
 
 
-## Clownfish endurance data into kilometers and hours
+*Clownfish endurance data into kilometers and hours*
 ```{r}
 endurance <- endurance %>%
   filter(dist_swam_in_cm != "NA") %>%
@@ -174,12 +174,15 @@ endurance <- endurance %>%
 ```
 
 
-## Speed in kilometers/ hour
+*Speed in kilometers/ hour*
 ```{r}
 endurance <- endurance %>% 
   filter(speed_in_km_hr != "NaN")
 ```
 
+### Calculations of journey time
+
+*Find average and fastest fish swimming speeds*
 ```{r}
 mean(endurance$speed_in_km_hr)
 ```
@@ -187,19 +190,33 @@ mean(endurance$speed_in_km_hr)
 ```{r}
 max(endurance$speed_in_km_hr)
 ```
-*calculations of journey time*
+
+Let's look at:
+
+no current
+with current
+with current and whale
+
+Distance/speed = time Then turn time into days
+
+They swim 1,816,053.83 meters = 1,816.052 kilometers from the great barrier to sydney
+
+The current is 250 nautical miles (463 km) from the shore. This will be the distance the whale takes them.
+
+Blue whale can travel up to 32.19 km/hr
+
 ```{r}
 #avg_journey_time <-  1,816.052km / 0.21888km_hr = 8,297.02 hrs / 24 = 346 days
 
-#avg_journey_time_current 1,816.052 / (0.21888 + 7)  = 251.57 hrs /24 = 10.5 days
+#avg_journey_time_current <- 1,816.052 / (0.21888 + 7)  = 251.57 hrs /24 = 10.5 days
 
-#avg_journey_time_current_whale ( 1,353.05 / (0.21888 + 7) ) + ( 463 / (0.21888 + 32.19) ) = 187.43 + 14.29 = 201.72 hrs /24 = 8.4 days
+#avg_journey_time_current_whale <- ( 1,353.05 / (0.21888 + 7) ) + ( 463 / (0.21888 + 32.19) ) = 187.43 + 14.29 = 201.72 hrs /24 = 8.4 days
 
-#max_journey_time  1,816.052 / 0.360 = 5,044.58 hrs / 24 = 210 days
+#max_journey_time <-  1,816.052 / 0.360 = 5,044.58 hrs / 24 = 210 days
 
-#max_journey_time_current  1,816.052 / (0.360 + 7) = 246.75 hrs /24 = 10.3 days
+#max_journey_time_current <-  1,816.052 / (0.360 + 7) = 246.75 hrs /24 = 10.3 days
 
-#max_journey_time_current_whale ((0.360 + 7) x 1,353.05) + ( 463 / (0.360 + 32.19)) = 183.84 + 14.22 = 198.06 hrs /24 = 8.3 days
+#max_journey_time_current_whale <- ((0.360 + 7) x 1,353.05) + ( 463 / (0.360 + 32.19)) = 183.84 + 14.22 = 198.06 hrs /24 = 8.3 days
 ```
 
 *take data of journey time and add it to vectors*
@@ -224,11 +241,7 @@ view(journey)
 
 
 
-They swim 1,816,053.83 meters = 1,816.052 kilometers from the great barrier to sydney
 
-The current is 250 nautical miles (463 km) from the shore. This will be the distance the whale takes them.
-
-Blue whale can travel up to 32.19 km/hr
 
 
 
